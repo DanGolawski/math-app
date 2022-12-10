@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { VideoPlayerComponent } from '../video-player/video-player.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 
 
 @NgModule({
@@ -12,8 +15,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    PipesModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, VideoPlayerComponent],
+  providers: [ScreenOrientation]
 })
 export class HomePageModule {}

@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" *ngIf="!showStartScreen">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Filmy
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
+  <div class="video-item" *ngFor="let video of videoList" (click)="openVideo(video.id.videoId)">
+    <img class="thumbnail" src="{{ video.snippet.thumbnails.medium.url }}">
+    <div class="video-title">
+      <p>{{ video.snippet.title }}</p>
+    </div>
+  </div>
+
+  <!-- <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </div> -->
 </ion-content>
+<img *ngIf="showStartScreen" class="startscreen" [src]="'assets/images/startscreen.gif'">
