@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Wybierz playlistę
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-container">
+    <div class="playlists-container" *ngIf="playlists">
+      <div *ngFor="let playlist of playlists" class="playlist">
+        <a [routerLink]="['/playlist', {playlist: playlist.id}]">
+          <div class="playlist-content">
+            <span class="playlist-icon">{{playlist.snippet.title[0].toUpperCase()}}</span>
+            <p class="playlist-title">{{playlist.snippet.title}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<img *ngIf="isLoading" class="waitingscreen" [src]="'assets/images/loadingscreen.gif'">

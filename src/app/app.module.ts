@@ -9,16 +9,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { PipesModule } from './pipes/pipes.module';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
+import { HomePage } from './home/home.page';
+import { ChannelComponent } from './channel/channel.component';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomePage, ChannelComponent, PlaylistComponent, VideoPlayerComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    PipesModule
+    PipesModule,
   ],
   providers: [ScreenOrientation, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

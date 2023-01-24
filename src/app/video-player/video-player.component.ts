@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 
@@ -7,7 +7,7 @@ import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/n
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss'],
 })
-export class VideoPlayerComponent implements OnInit {
+export class VideoPlayerComponent implements OnInit, OnDestroy {
 
   protected videoId?: string;
   protected url = ''
@@ -16,7 +16,13 @@ export class VideoPlayerComponent implements OnInit {
 
   ngOnInit() {
     this.screenOrientation.lock('landscape');
-    this.route.queryParams.subscribe((params: any) => this.url = `https://www.youtube.com/embed/${params.videoId}`);
+    this.route.queryParams.subscribe((params: any) => {
+      this.url = `https://www.youtube.com/embed/${params.videoId}`
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.screenOrientation.lock('portrait');
   }
 
 }

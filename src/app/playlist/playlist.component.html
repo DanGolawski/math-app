@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Filmy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="video-item" *ngFor="let video of videoList" (click)="openVideo(video.snippet.resourceId.videoId)">
+    <img class="thumbnail" src="{{ video.snippet.thumbnails.medium.url }}">
+    <div class="video-title">
+      <p>{{ video.snippet.title }}</p>
+    </div>
+  </div>
+</ion-content>
+
+<img *ngIf="isLoading" class="waitingscreen" [src]="'assets/images/loadingscreen.gif'">

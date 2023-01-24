@@ -2,7 +2,7 @@
   "name": "math-app",
   "integrations": {
     "capacitor": {
-      "enabled": false
+      "enabled": true
     },
     "cordova": {}
   },
