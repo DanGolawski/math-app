@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .thumbnail {
@@ -14,4 +17,13 @@
 
 .video-title {
   flex: 1;
+}
+
+p {
+  color: var(--ion-color-primary);
+}
+
+ion-content {
+  --background: var(--ion-color-primary);
+  font-weight: bold;
 }

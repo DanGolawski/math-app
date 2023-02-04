@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { YoutubeService } from '../youtube.service';
+import { YoutubeService } from '../../../youtube.service';
 
 @Component({
   selector: 'app-playlist',
@@ -15,12 +15,12 @@ export class PlaylistComponent implements OnInit {
   constructor(private route: ActivatedRoute, private youtubeService: YoutubeService, private router: Router) { }
 
   ngOnInit() {
-    const playlistId = this.route.snapshot.params['playlist']
+    const playlistId = this.route.snapshot.paramMap.get('playlistId') ?? '';
     this.getVideos(playlistId);
   }
 
   protected openVideo(videoId: string): void {
-    this.router.navigate(['../player'], { relativeTo: this.route, queryParams: {videoId}})
+    this.router.navigate(['play'], { relativeTo: this.route, queryParams: {videoId}})
   }
 
   private getVideos(playlistId: string): void {

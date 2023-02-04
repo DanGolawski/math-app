@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/models/book';
+import { ExercisesService } from '../exercises.service';
+
 
 @Component({
   selector: 'app-content-list',
@@ -7,8 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentListComponent implements OnInit {
 
-  constructor() { }
+  protected books: Book[];
+  protected selectedBook: any;
+  protected imgUrl = '';
 
-  ngOnInit() {}
+  constructor(private exercisesService: ExercisesService) { }
+
+  ngOnInit() {
+    this.getBooks();
+  }
+
+  private getBooks(): void {
+    this.exercisesService.getBooksWithChapters().subscribe(books => {
+      this.books = books
+    });
+  }
 
 }

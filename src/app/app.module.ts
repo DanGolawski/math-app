@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
@@ -10,12 +10,30 @@ import { CommonModule } from '@angular/common';
 import { PipesModule } from './pipes/pipes.module';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 import { HomePage } from './home/home.page';
-import { ChannelComponent } from './channel/channel.component';
-import { PlaylistComponent } from './playlist/playlist.component';
-import { VideoPlayerComponent } from './video-player/video-player.component';
+import { getStorage } from "firebase/storage";
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCPEaVy9jBqk4xIVPkS-wjKvSHM_Sp8iaM",
+  authDomain: "mathapp-82010.firebaseapp.com",
+  projectId: "mathapp-82010",
+  storageBucket: "mathapp-82010.appspot.com",
+  messagingSenderId: "407431684916",
+  appId: "1:407431684916:web:9fd199bd2c36194bf3fb61"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
 
 @NgModule({
-  declarations: [AppComponent, HomePage, ChannelComponent, PlaylistComponent, VideoPlayerComponent],
+  declarations: [AppComponent, HomePage],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -24,7 +42,10 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     CommonModule,
     PipesModule,
   ],
-  providers: [ScreenOrientation, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    ScreenOrientation,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Playlist } from '../models/youtube';
-import { YoutubeService } from '../youtube.service';
+import { Playlist } from '../../../models/youtube';
+import { YoutubeService } from '../../../youtube.service';
 
 @Component({
   selector: 'app-channel',

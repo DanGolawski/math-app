@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ChannelComponent } from './channel/channel.component';
+import { ChannelComponent } from './modules/courses/channel/channel.component';
 import { HomePage } from './home/home.page';
-import { PlaylistComponent } from './playlist/playlist.component';
-import { VideoPlayerComponent } from './video-player/video-player.component';
+import { PlaylistComponent } from './modules/courses/playlist/playlist.component';
+import { VideoPlayerComponent } from './modules/courses/video-player/video-player.component';
 
 const routes: Routes = [
   {
@@ -11,16 +11,12 @@ const routes: Routes = [
     component: HomePage
   },
   {
-    path: 'channel',
-    component: ChannelComponent
+    path: 'exercises',
+    loadChildren: () => import('./modules/exercises/exercises.module').then(m => m.ExercisesModule)
   },
   {
-    path: 'playlist',
-    component: PlaylistComponent
-  },
-  {
-    path: 'player',
-    component: VideoPlayerComponent
+    path: 'courses',
+    loadChildren: () => import('./modules/courses/courses.module').then(m => m.CoursesModule)
   },
   {
     path: '',

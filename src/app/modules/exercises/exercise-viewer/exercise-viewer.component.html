@@ -1,3 +1,33 @@
-<p>
-  exercise-viewer works!
-</p>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Zadania</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <p *ngIf="!exercises?.length">Te zadania będą niedługo :)</p>
+    <ul>
+      <li *ngFor="let exercise of exercises" (click)="showImage(exercise.url)">{{ subchapterNumber }}.{{ exercise.name | extension }}</li>
+    </ul>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Podgląd zadania</ion-title>
+      <ion-progress-bar *ngIf="isLoading" type="indeterminate"></ion-progress-bar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="main-content">
+    <p class="info-message" *ngIf="!selectedImageUrl; else exerciseImage">Wybierz zadanie z menu</p>
+    
+    <ng-template #exerciseImage>
+      <img [src]="selectedImageUrl" (load)="imageIsLoaded()">
+    </ng-template>
+    <div class="loading"></div>
+  </ion-content>
+</div>
