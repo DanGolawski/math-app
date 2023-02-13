@@ -23,7 +23,19 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="main-content">
-    <p class="info-message" *ngIf="!selectedImageUrl; else exerciseImage">Wybierz zadanie z menu</p>
+    <ng-container>
+      <h1 class="info-message" *ngIf="!selectedImageUrl; else exerciseImage">Wybierz zadanie z menu</h1>
+      <br>
+      <br>
+      <h3>Brakuje zadania?</h3>
+      <p class="info-message">Napisz do nas. Rozwiązanie umieścimy nawet tego samego dnia!</p>
+      <a href="mailto:mathmasters.contact@gmail.com">
+        <ion-button>
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          Napisz do nas
+        </ion-button>
+      </a>
+    </ng-container>
     
     <ng-template #exerciseImage>
       <img [src]="selectedImageUrl" (load)="imageIsLoaded()">

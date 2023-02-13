@@ -9,6 +9,8 @@ p {
 
 .info-message {
   color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
 ul {
@@ -28,4 +30,19 @@ li {
 
 img {
   width: 100vw;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+a {
+  display: table;
+  margin: auto;
+}
+
+ion-button {
+  --background: var(--ion-color-primary-contrast);
+  --color: var(--ion-color-primary);
 }
