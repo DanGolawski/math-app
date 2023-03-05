@@ -16,6 +16,7 @@ export interface Subchapter {
 }
 
 export interface Exercise {
+  id?: number;
   name: string,
   url: string
 }

@@ -13,8 +13,11 @@ export class ExerciseViewerComponent implements OnInit {
 
   protected exercises: Exercise[];
   protected subchapterNumber: number;
-  protected selectedImageUrl: string
+  protected selectedImageUrl: string;
+  protected selectedImageName: string;
   protected isLoading = false;
+  protected bookid: string | null;
+  protected chapterNumber: number;
   private storage: FirebaseStorage;
   
   constructor(private route: ActivatedRoute) { }
@@ -24,9 +27,10 @@ export class ExerciseViewerComponent implements OnInit {
     this.getExercises(this.getFolderPath());
   }
 
-  protected showImage(imgUrl: string): void {
+  protected showImage(exercise: Exercise): void {
     this.isLoading = true;
-    this.selectedImageUrl = imgUrl;
+    this.selectedImageUrl = exercise.url;
+    this.selectedImageName = exercise.name;
     menuController.toggle();
   }
 
@@ -37,14 +41,20 @@ export class ExerciseViewerComponent implements OnInit {
   private async getExercises(exercisesPath: string): Promise<void> {
     const exercisesFolderRef = ref(this.storage, exercisesPath);
     const exercises = await list(exercisesFolderRef);
-    this.exercises = await Promise.all(exercises.items.map(async exercise => ({name: exercise.name, url: await getDownloadURL(exercise)})));
+    this.exercises = await Promise.all(exercises.items.map(async exercise => ({id: this.getIdByName(exercise.name) ,name: exercise.name, url: await getDownloadURL(exercise)})));
+    this.exercises.sort((ex1, ex2) => ((ex1.id ?? 0) > (ex2.id ?? 0)) ? 1 : -1);
+    console.log(this.exercises)
+  }
+
+  private getIdByName(exerciseName: string): number {
+    return +exerciseName.split('.')[0]
   }
 
   private getFolderPath(): string {
-    const bookid = this.route.snapshot.paramMap.get('bookid');
-    const chapterNumber = +(this.route.snapshot.paramMap.get('chapter') ?? '');
+    this.bookid = this.route.snapshot.paramMap.get('bookid');
+    this.chapterNumber = +(this.route.snapshot.paramMap.get('chapter') ?? '');
     this.subchapterNumber = +(this.route.snapshot.paramMap.get('subchapter') ?? '');
-    return `${bookid}/${chapterNumber}/${this.subchapterNumber}`;
+    return `${this.bookid}/${this.chapterNumber}/${this.subchapterNumber}`;
   }
 
 }
