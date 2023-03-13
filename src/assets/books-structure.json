@@ -1,522 +1,1553 @@
 [
   {
-    "name": "Matematyka OE Pazdro 1 poziom rozszerzony",
+    "name": "Matematyka Pazdro 1, 2019, p. rozszerzony",
     "id": "pazdro_1_1",
     "chapters": [
-      {
-        "number": 1,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      },
-      {
-        "number": 2,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      },
-      {
-        "number": 3,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      },
-      {
-        "number": 4,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      },
-      {
-        "number": 5,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      },
-      {
-        "number": 6,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      }
+       {
+          "name": "Zbiory liczbowe. Liczby rzeczywiste",
+          "number": 1,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Zbiór. Działania na zbiorach "
+             },
+             {
+                "number": 2,
+                "name": "Zbiory liczbowe "
+             },
+             {
+                "number": 3,
+                "name": "Prawa działań w zbiorze liczb rzeczywistych "
+             },
+             {
+                "number": 4,
+                "name": "Przedziały "
+             },
+             {
+                "number": 5,
+                "name": "Zbiór liczb naturalnych i zbiór liczb całkowitych "
+             },
+             {
+                "number": 6,
+                "name": "Przypomnienie i uzupełnienie wiadomości o równaniach "
+             },
+             {
+                "number": 7,
+                "name": "Rozwiązywanie równań metodą równań równoważnych "
+             },
+             {
+                "number": 8,
+                "name": "Nierówność z jedną niewiadomą. Rozwiązywanie nierówności"
+             },
+             {
+                "number": 9,
+                "name": "metodą nierówności równoważnych "
+             },
+             {
+                "number": 10,
+                "name": "Procenty "
+             },
+             {
+                "number": 11,
+                "name": "Punkty procentowe "
+             },
+             {
+                "number": 12,
+                "name": "Przybliżenia, błąd bezwzględny i błąd względny, szacowanie "
+             },
+             {
+                "number": 13,
+                "name": "Zadania powtórzeniowe do rozdziału 1"
+             }
+          ]
+       },
+       {
+          "name": "Wyrażenia algebraiczne",
+          "number": 2,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Potęga o wykładniku naturalnym "
+             },
+             {
+                "number": 2,
+                "name": "Pierwiastek arytmetyczny. Pierwiastek stopnia nieparzystego"
+             },
+             {
+                "number": 3,
+                "name": "z liczby ujemnej "
+             },
+             {
+                "number": 4,
+                "name": "Działania na wyrażeniach algebraicznych "
+             },
+             {
+                "number": 5,
+                "name": "Wzory skróconego mnożenia "
+             },
+             {
+                "number": 6,
+                "name": "Potęga o wykładniku całkowitym ujemnym "
+             },
+             {
+                "number": 7,
+                "name": "Potęga o wykładniku wymiernym "
+             },
+             {
+                "number": 8,
+                "name": "Potęga o wykładniku rzeczywistym "
+             },
+             {
+                "number": 9,
+                "name": "Określenie logarytmu "
+             },
+             {
+                "number": 10,
+                "name": "Zastosowanie logarytmów "
+             },
+             {
+                "number": 11,
+                "name": "Zdanie. Zaprzeczenie zdania "
+             },
+             {
+                "number": 12,
+                "name": "Zdanie złożone. Zaprzeczenia zdań złożonych "
+             },
+             {
+                "number": 13,
+                "name": "Definicja. Twierdzenie. Dowód twierdzenia "
+             },
+             {
+                "number": 14,
+                "name": "Przekształcanie wzorów "
+             },
+             {
+                "number": 15,
+                "name": "Średnie "
+             },
+             {
+                "number": 16,
+                "name": "Zadania powtórzeniowe do rozdziału 2"
+             }
+          ]
+       },
+       {
+          "name": "Funkcja i jej własności",
+          "number": 3,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Pojęcie funkcji. Funkcja liczbowa. Sposoby opisywania funkcji "
+             },
+             {
+                "number": 2,
+                "name": "Wykres funkcji "
+             },
+             {
+                "number": 3,
+                "name": "Dziedzina funkcji liczbowej "
+             },
+             {
+                "number": 4,
+                "name": "Zbiór wartości funkcji liczbowej. Najmniejsza i największa"
+             },
+             {
+                "number": 5,
+                "name": "wartość funkcji "
+             },
+             {
+                "number": 6,
+                "name": "Miejsce zerowe funkcji "
+             },
+             {
+                "number": 7,
+                "name": "Funkcje równe "
+             },
+             {
+                "number": 8,
+                "name": "Monotoniczność funkcji "
+             },
+             {
+                "number": 9,
+                "name": "Funkcje różnowartościowe "
+             },
+             {
+                "number": 10,
+                "name": "Funkcje parzyste i funkcje nieparzyste "
+             },
+             {
+                "number": 11,
+                "name": "Odczytywanie własności funkcji na podstawie jej wykresu."
+             },
+             {
+                "number": 12,
+                "name": "Szkicowanie wykresów funkcji o zadanych własnościach "
+             },
+             {
+                "number": 13,
+                "name": "Zastosowanie wiadomości o funkcjach do opisywania,"
+             },
+             {
+                "number": 14,
+                "name": "interpretowania i przetwarzania informacji wyrażonych w postaci"
+             },
+             {
+                "number": 15,
+                "name": "wykresu funkcji "
+             },
+             {
+                "number": 16,
+                "name": "Zadania powtórzeniowe do rozdziału 3"
+             }
+          ]
+       },
+       {
+          "name": "Funkcja liniowa",
+          "number": 4,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Proporcjonalność prosta "
+             },
+             {
+                "number": 2,
+                "name": "Funkcja liniowa. Wykres i miejsce zerowe funkcji liniowej "
+             },
+             {
+                "number": 3,
+                "name": "Znaczenie współczynnika kierunkowego występującego we wzorze"
+             },
+             {
+                "number": 4,
+                "name": "funkcji liniowej "
+             },
+             {
+                "number": 5,
+                "name": "Własności funkcji liniowej – zadania różne "
+             },
+             {
+                "number": 6,
+                "name": "Zastosowanie własności funkcji liniowej w zadaniach praktycznych "
+             },
+             {
+                "number": 7,
+                "name": "Wykresy wybranych funkcji "
+             },
+             {
+                "number": 8,
+                "name": "Zadania powtórzeniowe do rozdziału 4"
+             }
+          ]
+       },
+       {
+          "name": "Układy równań liniowych z dwiema niewiadomymi",
+          "number": 5,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Równania pierwszego stopnia z dwiema niewiadomymi "
+             },
+             {
+                "number": 2,
+                "name": "Układ równań pierwszego stopnia z dwiema niewiadomymi."
+             },
+             {
+                "number": 3,
+                "name": "Graficzne rozwiązywanie układów równań "
+             },
+             {
+                "number": 4,
+                "name": "Rozwiązywanie układów równań pierwszego stopnia z dwiema"
+             },
+             {
+                "number": 5,
+                "name": "niewiadomymi metodą podstawiania "
+             },
+             {
+                "number": 6,
+                "name": "Rozwiązywanie układów równań pierwszego stopnia z dwiema"
+             },
+             {
+                "number": 7,
+                "name": "niewiadomymi metodą przeciwnych współczynników "
+             },
+             {
+                "number": 8,
+                "name": "Zastosowanie układów równań do rozwiązywania zadań "
+             },
+             {
+                "number": 9,
+                "name": "Zadania powtórzeniowe do rozdziału 5"
+             }
+          ]
+       },
+       {
+          "name": "Podstawowe własności wybranych funkcji",
+          "number": 6,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Funkcja kwadratowa "
+             },
+             {
+                "number": 2,
+                "name": "Funkcja kwadratowa – zastosowania "
+             },
+             {
+                "number": 3,
+                "name": "Proporcjonalność odwrotna "
+             },
+             {
+                "number": 4,
+                "name": "Funkcja wykładnicza "
+             },
+             {
+                "number": 5,
+                "name": "Funkcja logarytmiczna "
+             },
+             {
+                "number": 6,
+                "name": "Zadania powtórzeniowe do rozdziału 6"
+             }
+          ]
+       },
+       {
+          "name": "Geometria płaska – pojęcia wstępne. Trójkąty",
+          "number": 7,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Punkt, prosta, odcinek, półprosta, kąt, figura wypukła,"
+             },
+             {
+                "number": 2,
+                "name": "figura ograniczona "
+             },
+             {
+                "number": 3,
+                "name": "Wzajemne położenie prostych na płaszczyźnie, odległość punktu"
+             },
+             {
+                "number": 4,
+                "name": "od prostej, odległość między prostymi równoległymi, symetralna"
+             },
+             {
+                "number": 5,
+                "name": "odcinka, dwusieczna kąta "
+             },
+             {
+                "number": 6,
+                "name": "Dwie proste przecięte trzecią prostą. Suma kątów w trójkącie "
+             },
+             {
+                "number": 7,
+                "name": "Wielokąt. Wielokąt foremny. Suma kątów w wielokącie "
+             },
+             {
+                "number": 8,
+                "name": "Twierdzenie Talesa "
+             },
+             {
+                "number": 9,
+                "name": "Podział trójkątów. Nierówność trójkąta. Odcinek łączący środki"
+             },
+             {
+                "number": 10,
+                "name": "boków w trójkącie "
+             },
+             {
+                "number": 11,
+                "name": "Twierdzenie Pitagorasa. Twierdzenie odwrotne"
+             },
+             {
+                "number": 12,
+                "name": "do twierdzenia Pitagorasa "
+             },
+             {
+                "number": 13,
+                "name": "Wysokości w trójkącie. Środkowe w trójkącie "
+             },
+             {
+                "number": 14,
+                "name": "Przystawanie trójkątów "
+             },
+             {
+                "number": 15,
+                "name": "Podobieństwo trójkątów "
+             },
+             {
+                "number": 16,
+                "name": "Podobieństwo trójkątów – zastosowanie w zadaniach "
+             },
+             {
+                "number": 17,
+                "name": "Wektor na płaszczyźnie "
+             },
+             {
+                "number": 18,
+                "name": "Zadania powtórzeniowe do rozdziału 7"
+             }
+          ]
+       },
+       {
+          "name": "Trygonometria kąta ostrego",
+          "number": 8,
+          "subchapters": [
+             {
+                "number": 1,
+                "name": "Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie"
+             },
+             {
+                "number": 2,
+                "name": "prostokątnym "
+             },
+             {
+                "number": 3,
+                "name": "Wartości sinusa, cosinusa, tangensa i cotangensa kątów 30°, 45° i 60° "
+             },
+             {
+                "number": 4,
+                "name": "Zależności między funkcjami trygonometrycznymi tego samego"
+             },
+             {
+                "number": 5,
+                "name": "kąta ostrego"
+             },
+             {
+                "number": 6,
+                "name": "Zadania powtórzeniowe do rozdziału 8"
+             }
+          ]
+       }
     ]
-  },
-  {
-    "name": "Matematyka OE Pazdro 2 poziom rozszerzony",
-    "id": "pazdro_2_1",
-    "chapters": [
+ },
+ {
+   "name": "Matematyka Pazdro 2, 2019, p. rozszerzony",
+   "id": "pazdro_2_1",
+   "chapters": [
       {
-        "number": 1,
-        "name": "",
-        "subchapters": [
-          {"number": 1, "name": ""},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Przekształcenia wykresów funkcji",
+         "number": 1,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Wektor w układzie współrzędnych – podstawowe informacje "
+            },
+            {
+               "number": 2,
+               "name": "Przesunięcie równoległe. Przesunięcie równoległe wzdłuż osi OX"
+            },
+            {
+               "number": 3,
+               "name": "Przesunięcie równoległe wzdłuż osi OY"
+            },
+            {
+               "number": 4,
+               "name": "Symetria osiowa. Symetria osiowa względem osi OX i OY"
+            },
+            {
+               "number": 5,
+               "name": "Symetria środkowa. Symetria środkowa względem punktu (0, 0) "
+            },
+            {
+               "number": 6,
+               "name": "Wykres funkcji y = |f(x)| oraz y = f(|x|)"
+            },
+            {
+               "number": 7,
+               "name": "Wykres funkcji y = k·f(x) oraz y = f(k·x), gdzie k ≠ 0 "
+            },
+            {
+               "number": 8,
+               "name": "Szkicowanie wykresów wybranych funkcji "
+            },
+            {
+               "number": 9,
+               "name": "Zastosowanie wykresów funkcji do rozwiązywania równań i nierówności"
+            },
+            {
+               "number": 10,
+               "name": "Zadania powtórzeniowe do rozdziału 1. "
+            }
+         ]
       },
       {
-        "number": 2,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Równania i nierówności z wartością bezwzględną",
+         "number": 2,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Wartość bezwzględna liczby rzeczywistej "
+            },
+            {
+               "number": 2,
+               "name": "Odległość między liczbami na osi liczbowej. Geometryczn"
+            },
+            {
+               "number": 3,
+               "name": "interpretacja wartości bezwzględnej na osi liczbowej "
+            },
+            {
+               "number": 4,
+               "name": "Proste równania z wartością bezwzględną "
+            },
+            {
+               "number": 5,
+               "name": "Proste nierówności z wartością bezwzględną "
+            },
+            {
+               "number": 6,
+               "name": "Własności wartości bezwzględnej "
+            },
+            {
+               "number": 7,
+               "name": "Równania z wartością bezwzględną "
+            },
+            {
+               "number": 8,
+               "name": "Nierówności z wartością bezwzględną "
+            },
+            {
+               "number": 9,
+               "name": "Równanie liniowe z parametrem "
+            },
+            {
+               "number": 10,
+               "name": "Nierówność liniowa z parametrem "
+            },
+            {
+               "number": 11,
+               "name": "Równania liniowe z wartością bezwzględną i z parametrem "
+            },
+            {
+               "number": 12,
+               "name": "Układy równań pierwszego stopni"
+            },
+            {
+               "number": 13,
+               "name": "z dwiema niewiadomymi z parametrem "
+            },
+            {
+               "number": 14,
+               "name": "Zadania powtórzeniowe do rozdziału 2. "
+            }
+         ]
       },
       {
-        "number": 3,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Funkcja kwadratowa",
+         "number": 3,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Przypomnienie wiadomośc"
+            },
+            {
+               "number": 2,
+               "name": "o funkcji kwadratowej z klasy 1. "
+            },
+            {
+               "number": 3,
+               "name": "Związek między wzorem funkcji kwadratowej w postaci ogólnej"
+            },
+            {
+               "number": 4,
+               "name": "a wzorem funkcji kwadratowej w postaci kanonicznej "
+            },
+            {
+               "number": 5,
+               "name": "Miejsce zerowe funkcji kwadratowej"
+            },
+            {
+               "number": 6,
+               "name": "Wzór funkcji kwadratowej w postaci iloczynowej "
+            },
+            {
+               "number": 7,
+               "name": "Szkicowanie wykresów funkcji kwadratowych. Odczytywani"
+            },
+            {
+               "number": 8,
+               "name": "własności funkcji kwadratowej na podstawie wykresu "
+            },
+            {
+               "number": 9,
+               "name": "Wyznaczanie wzoru funkcji kwadratowej na podstawie jej własności "
+            },
+            {
+               "number": 10,
+               "name": "Najmniejsza oraz największa wartość funkcji kwadratowe"
+            },
+            {
+               "number": 11,
+               "name": "w przedziale domkniętym "
+            },
+            {
+               "number": 12,
+               "name": "Badanie funkcji kwadratowej – zadania optymalizacyjne "
+            },
+            {
+               "number": 13,
+               "name": "Równania kwadratowe "
+            },
+            {
+               "number": 14,
+               "name": "Równania prowadzące do równań kwadratowych "
+            },
+            {
+               "number": 15,
+               "name": "Nierówności kwadratowe "
+            },
+            {
+               "number": 16,
+               "name": "Zadania prowadzące do równań i nierówności kwadratowych "
+            },
+            {
+               "number": 17,
+               "name": "Równania i nierówności, w których niewiadom"
+            },
+            {
+               "number": 18,
+               "name": "występuje pod znakiem pierwiastka kwadratowego "
+            },
+            {
+               "number": 19,
+               "name": "Wykres funkcji kwadratowej z wartością bezwzględną "
+            },
+            {
+               "number": 20,
+               "name": "Równania i nierówności kwadratowe z wartością bezwzględną "
+            },
+            {
+               "number": 21,
+               "name": "Wzory Viete’a "
+            },
+            {
+               "number": 22,
+               "name": "Równania i nierówności kwadratowe z parametrem "
+            },
+            {
+               "number": 23,
+               "name": "Zadania powtórzeniowe do rozdziału 3. "
+            }
+         ]
       },
       {
-        "number": 4,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Geometria płaska – okręgi i koła",
+         "number": 4,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Powtórzenie wiadomości z geometrii z klasy 1. "
+            },
+            {
+               "number": 2,
+               "name": "Okrąg. Położenie prostej i okręgu "
+            },
+            {
+               "number": 3,
+               "name": "Wzajemne położenie dwóch okręgów "
+            },
+            {
+               "number": 4,
+               "name": "Koła i kąty "
+            },
+            {
+               "number": 5,
+               "name": "Twierdzenie o stycznej i siecznej "
+            },
+            {
+               "number": 6,
+               "name": "Symetralne boków trójkąta. Okrąg opisany na trójkącie "
+            },
+            {
+               "number": 7,
+               "name": "Dwusieczne kątów trójkąta. Okrąg wpisany w trójkąt "
+            },
+            {
+               "number": 8,
+               "name": "Zadania powtórzeniowe do rozdziału 4. "
+            }
+         ]
       },
       {
-        "number": 5,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Trygonometria",
+         "number": 5,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Trygonometria kąta ostrego – powtórzenie wiadomości z klasy 1. "
+            },
+            {
+               "number": 2,
+               "name": "Sinus, cosinus tangens i cotangens dowolnego kąta płaskiego "
+            },
+            {
+               "number": 3,
+               "name": "Podstawowe tożsamości trygonometryczne "
+            },
+            {
+               "number": 4,
+               "name": "Wybrane wzory redukcyjne "
+            },
+            {
+               "number": 5,
+               "name": "Kąt skierowany. Miara łukowa kąta "
+            },
+            {
+               "number": 6,
+               "name": "Funkcje trygonometryczne zmiennej rzeczywistej "
+            },
+            {
+               "number": 7,
+               "name": "Wykresy funkcji trygonometrycznych  "
+            },
+            {
+               "number": 8,
+               "name": "Zadania powtórzeniowe do rozdziału 5. "
+            }
+         ]
       },
       {
-        "number": 6,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Geometria analityczna",
+         "number": 6,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Odcinek w układzie współrzędnych "
+            },
+            {
+               "number": 2,
+               "name": "Równanie kierunkowe prostej "
+            },
+            {
+               "number": 3,
+               "name": "Równanie ogólne prostej "
+            },
+            {
+               "number": 4,
+               "name": "Równanie okręgu "
+            },
+            {
+               "number": 5,
+               "name": "Wyznaczanie w układzie współrzędnych punktów wspólnyc"
+            },
+            {
+               "number": 6,
+               "name": "prostych, okręgów i parabol "
+            },
+            {
+               "number": 7,
+               "name": "Zastosowanie układów równań do rozwiazywania zada"
+            },
+            {
+               "number": 8,
+               "name": "z geometrii analitycznej "
+            },
+            {
+               "number": 9,
+               "name": "Zadania powtórzeniowe do rozdziału 6. "
+            }
+         ]
       },
       {
-        "number": 7,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Geometria płaska – rozwiązywanie trójkątów, pole trójkąta, pole koła",
+         "number": 7,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Twierdzenie sinusów "
+            },
+            {
+               "number": 2,
+               "name": "Twierdzenie cosinusów "
+            },
+            {
+               "number": 3,
+               "name": "Zastosowanie twierdzenia sinusów i twierdzenia cosinusó"
+            },
+            {
+               "number": 4,
+               "name": "do rozwiązywania zadań "
+            },
+            {
+               "number": 5,
+               "name": "Pole figury płaskiej "
+            },
+            {
+               "number": 6,
+               "name": "Pole trójkąta, cz. 1 "
+            },
+            {
+               "number": 7,
+               "name": "Pole trójkąta, cz. 2 "
+            },
+            {
+               "number": 8,
+               "name": "Pola trójkątów podobnych "
+            },
+            {
+               "number": 9,
+               "name": "Pole koła, pole wycinka koła "
+            },
+            {
+               "number": 10,
+               "name": "Zastosowanie pojęcia pola w dowodzeniu twierdzeń "
+            },
+            {
+               "number": 11,
+               "name": "Zadania powtórzeniowe do rozdziału 7. "
+            }
+         ]
+      },
+      {
+         "name": "Wielomiany",
+         "number": 8,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Wielomiany jednej zmiennej rzeczywistej "
+            },
+            {
+               "number": 2,
+               "name": "Dodawanie, odejmowanie i mnożenie wielomianów "
+            },
+            {
+               "number": 3,
+               "name": "Równość wielomianów "
+            },
+            {
+               "number": 4,
+               "name": "Wzory skróconego mnożenia stopnia 3. Wzór na an – bn"
+            },
+            {
+               "number": 5,
+               "name": "Zastosowanie wzorów skróconego mnożenia w dowodzeniu "
+            },
+            {
+               "number": 6,
+               "name": "Podzielność wielomianów "
+            },
+            {
+               "number": 7,
+               "name": "Dzielenie wielomianu przez dwumian liniowy. Schemat Hornera "
+            },
+            {
+               "number": 8,
+               "name": "Dzielenie wielomianu przez wielomian stopnia większego od 1 "
+            },
+            {
+               "number": 9,
+               "name": "Pierwiastek wielomianu. Twierdzenie Bezouta "
+            },
+            {
+               "number": 10,
+               "name": "Pierwiastki wymierne wielomianu "
+            },
+            {
+               "number": 11,
+               "name": "Pierwiastek wielokrotny "
+            },
+            {
+               "number": 12,
+               "name": "Rozkładanie wielomianów na czynniki "
+            },
+            {
+               "number": 13,
+               "name": "Równania wielomianowe "
+            },
+            {
+               "number": 14,
+               "name": "Zadania prowadzące do równań wielomianowych "
+            },
+            {
+               "number": 15,
+               "name": "Równania wielomianowe z parametrem "
+            },
+            {
+               "number": 16,
+               "name": "Funkcje wielomianowe "
+            },
+            {
+               "number": 17,
+               "name": "Nierówności wielomianowe "
+            },
+            {
+               "number": 18,
+               "name": "Zadania powtórzeniowe do rozdziału 8. "
+            }
+         ]
       }
-    ]
-  },
-  {
-    "name": "Matematyka OE Pazdro 3 poziom rozszerzony",
-    "id": "pazdro_3_1",
-    "chapters": [
+   ]
+},
+{
+   "name": "Matematyka Pazdro 3, 2019, p. rozszerzony",
+   "id": "pazdro_3_1",
+   "chapters": [
       {
-        "number": 1,
-        "name": "Ułamki algebraiczne. Rownania i nierówności wymierne. Funkcje wymierne",
-        "subchapters": [
-          {"number": 1, "name": "Ułamek algebraiczny. Skracanie i rozszerzanie ułamków algebraicznych"},
-          {"number": 2, "name": "Dodawanie i odejmowanie ułamków algebraicznych"},
-          {"number": 3, "name": "Mnożenie i dzielenie ułamków algebraicznych"},
-          {"number": 4, "name": "Działania na ułamkach algebraicznych"},
-          {"number": 5, "name": "Równania wymierne"},
-          {"number": 6, "name": "Zadania tekstowe prowadzące do równań wymiernych"},
-          {"number": 7, "name": "Nierówności wymierne"},
-          {"number": 8, "name": "Dowodzenie z zastosowaniem średniej arytmetycznej, średniej geometrycznej i średniej kwadratowej kilku liczb"},
-          {"number": 9, "name": "Funkcja homograficzna"},
-          {"number": 10, "name": "Zastosowanie wiadomości o funkcji homograficznej w zadaniach"},
-          {"number": 11, "name": "Funkcje wymierne"},
-          {"number": 12, "name": "Zadania powtórzeniowe do rozdziału 1"}
-        ]
+         "name": "Ułamki algebraiczne. Równiania i nierówności wymierne. Funkcje wymierne",
+         "number": 1,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Ułamek algebraiczny. Skracanie i rozszerzanie ułamków algebraicznych "
+            },
+            {
+               "number": 2,
+               "name": "Dodawanie i odejmowanie ułamków algebraicznych"
+            },
+            {
+               "number": 3,
+               "name": "Mnożenie i dzielenie ułamków algebraicznych"
+            },
+            {
+               "number": 4,
+               "name": "Działania na ułamkach algebraicznych"
+            },
+            {
+               "number": 5,
+               "name": "Równania wymierne"
+            },
+            {
+               "number": 6,
+               "name": "Zadania tekstowe prowadzące do równań wymiernych"
+            },
+            {
+               "number": 7,
+               "name": "Nierówności wymierne"
+            },
+            {
+               "number": 8,
+               "name": "Dowodzenie z zastosowaniem średniej arytmetycznej, średniej geometrycznej i średniej kwadratowej kilku liczb"
+            },
+            {
+               "number": 9,
+               "name": "Funkcja homograficzna"
+            },
+            {
+               "number": 10,
+               "name": "Zastosowanie wiadomości o funkcji homograficznej w zadaniach"
+            },
+            {
+               "number": 11,
+               "name": "Funkcje wymierne"
+            },
+            {
+               "number": 1,
+               "name": "Zadania powtórzeniowe do rozdziału 1"
+            }
+         ]
       },
       {
-        "number": 2,
-        "name": "Ciągi",
-        "subchapters": [
-          {"number": 1, "name": "Określenie ciągu. Sposoby opisywania ciągów"},
-          {"number": 2, "name": "Monotoniczność ciągów"},
-          {"number": 3, "name": "Ciąg arytmetyczny"},
-          {"number": 4, "name": "Suma początkowych wyrazów ciągu arytmetycznego"},
-          {"number": 5, "name": "Ciąg geometryczny"},
-          {"number": 6, "name": "Suma początkowych wyrazów ciągu geometrycznego"},
-          {"number": 7, "name": "Ciąg arytmetyczny i ciąg geometryczny - zadania różne"},
-          {"number": 8, "name": "Lokaty pieniężne i kredyty bankowe"},
-          {"number": 9, "name": "Granica ciągu liczbowego"},
-          {"number": 10, "name": "Obliczanie granic ciągów zbieżnych"},
-          {"number": 11, "name": "Wybrane własności ciągów zbieżnych"},
-          {"number": 12, "name": "Ciągi rozbieżne do nieskończoności"},
-          {"number": 13, "name": "Szereg geometryczny"},
-          {"number": 14, "name": "Zadania powtórzeniowe do rozdziału 2"}
-        ]
+         "name": "Ciągi",
+         "number": 2,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Określenie ciągu. Sposoby opisywania ciągów"
+            },
+            {
+               "number": 2,
+               "name": "Monotoniczność ciągów"
+            },
+            {
+               "number": 3,
+               "name": "Ciąg arytmetyczny"
+            },
+            {
+               "number": 4,
+               "name": "Suma początkowych wyrazów ciągu arytmetycznego"
+            },
+            {
+               "number": 5,
+               "name": "Ciąg geometryczny"
+            },
+            {
+               "number": 6,
+               "name": "Suma początkowych wyrazów ciągu geometrycznego"
+            },
+            {
+               "number": 7,
+               "name": "Ciąg arytmetyczny i ciąg geometryczny - zadania różne"
+            },
+            {
+               "number": 8,
+               "name": "Lokaty pieniężne i kredyty bankowe"
+            },
+            {
+               "number": 9,
+               "name": "Granica ciągu liczbowego"
+            },
+            {
+               "number": 10,
+               "name": "Obliczanie granic ciągów zbieżnych"
+            },
+            {
+               "number": 11,
+               "name": "Wybrane własności ciągów zbieżnych"
+            },
+            {
+               "number": 12,
+               "name": "Ciągi rozbieżne do nieskończoności"
+            },
+            {
+               "number": 13,
+               "name": "Szereg geometryczny"
+            },
+            {
+               "number": 14,
+               "name": "Zadania powtórzeniowe do rozdziału 2"
+            }
+         ]
       },
       {
-        "number": 3,
-        "name": "Kombinatoryka. Dwumian Newtona. Trójkąt Pascala",
-        "subchapters": [
-          {"number": 1, "name": "Wariacje"},
-          {"number": 2, "name": "Permutacje"},
-          {"number": 3, "name": "Kombinacje"},
-          {"number": 4, "name": "Kombinatoryka - zadania różne"},
-          {"number": 5, "name": "Symbol Newtona. Wzór Newtona. Trójkąt Pascala"},
-          {"number": 6, "name": "Zadania powtórzeniowe do rozdziału 3"}
-        ]
+         "name": "Kombinatoryka. Dwumian Newtona. Trójkąt Pascala",
+         "number": 3,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Wariacje"
+            },
+            {
+               "number": 2,
+               "name": "Permutacje"
+            },
+            {
+               "number": 3,
+               "name": "Kombinacje"
+            },
+            {
+               "number": 4,
+               "name": "Kombinatoryka - zadania różne"
+            },
+            {
+               "number": 5,
+               "name": "Symbol Newtona. Wzór Newtona. Trójkąt Pascala"
+            },
+            {
+               "number": 6,
+               "name": "Zadania powtórzeniowe do rozdziału 3"
+            }
+         ]
       },
       {
-        "number": 4,
-        "name": "Czworokąty",
-        "subchapters": [
-          {"number": 1, "name": "Podział czworokątów. Trapezoidy"},
-          {"number": 2, "name": "Trapezy"},
-          {"number": 3, "name": "Równoległoboki"},
-          {"number": 4, "name": "Okrąg opisany na czworokącie"},
-          {"number": 5, "name": "Okrąg wpisany w czworokąt"},
-          {"number": 6, "name": "Okrąg opisany na czworokącie, okrąg wpisany w czworokąt - zadania na dowodzenie"},
-          {"number": 7, "name": "Podobieństwo. Czworokąty podobne"},
-          {"number": 8, "name": "Zadania powtórzeniowe do rozdziału 4"}
-        ]
+         "name": "Czworokąty",
+         "number": 4,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Podział czworokątów. Trapezoidy"
+            },
+            {
+               "number": 2,
+               "name": "Trapezy"
+            },
+            {
+               "number": 3,
+               "name": "Równoległoboki"
+            },
+            {
+               "number": 4,
+               "name": "Okrąg opisany na czworokącie"
+            },
+            {
+               "number": 5,
+               "name": "Okrąg wpisany w czworokąt"
+            },
+            {
+               "number": 6,
+               "name": "Okrąg opisany na czworokącie, okrąg wpisany w czworokąt - zadania na dowodzenie"
+            },
+            {
+               "number": 7,
+               "name": "Podobieństwo. Czworokąty podobne"
+            },
+            {
+               "number": 8,
+               "name": "Zadania powtórzeniowe do rozdziału 4"
+            }
+         ]
       },
       {
-        "number": 5,
-        "name": "Geometria płaska",
-        "subchapters": [
-          {"number": 1, "name": "Pole prostokąta. Pole kwadratu"},
-          {"number": 2, "name": "Pole równoległoboku. Pole rombu"},
-          {"number": 3, "name": "Pole trapezu"},
-          {"number": 4, "name": "Pole czworokąta - zadania różne"},
-          {"number": 5, "name": "Pola figur podobnych"},
-          {"number": 6, "name": "Mapa. Skala mapy"},
-          {"number": 7, "name": "Zadania powtórzeniowe do rozdziału 5"}
-        ]
+         "name": "Geometria płaska - pole czworokąta",
+         "number": 5,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Pole prostokąta. Pole kwadratu"
+            },
+            {
+               "number": 2,
+               "name": "Pole równoległoboku. Pole rombu"
+            },
+            {
+               "number": 3,
+               "name": "Pole trapezu"
+            },
+            {
+               "number": 4,
+               "name": "Pole czworokąta - zadania różne"
+            },
+            {
+               "number": 5,
+               "name": "Pola figur podobnych"
+            },
+            {
+               "number": 6,
+               "name": "Mapa. Skala mapy"
+            },
+            {
+               "number": 7,
+               "name": "Zadania powtórzeniowe do rozdziału 5"
+            }
+         ]
       },
       {
-        "number": 6,
-        "name": "Elementy analizy matematycznej",
-        "subchapters": [
-          {"number": 1, "name": "Granica funkcji w punkcie"},
-          {"number": 2, "name": "Obliczanie granicy funkcji w punkcie"},
-          {"number": 3, "name": "Granice jednostronne funkcji w punkcie"},
-          {"number": 4, "name": "Granica funkcji w nieskończoności"},
-          {"number": 5, "name": "Granica niewłaściwa funkcji"},
-          {"number": 6, "name": "Ciągłość funkcji w punkcie"},
-          {"number": 7, "name": "Ciągłość funkcji w zbiorze"},
-          {"number": 8, "name": "Asymptoty wykresu funkcji"},
-          {"number": 9, "name": "Pochodna funkcji w punkcie"},
-          {"number": 10, "name": "Funkcja pochodna"},
-          {"number": 11, "name": "Funkcja złożona. Pochodna funkcji złożonej"},
-          {"number": 12, "name": "Styczna do wykresu funkcji"},
-          {"number": 13, "name": "Pochodna funkcji a monotoniczność funkcji"},
-          {"number": 14, "name": "Ekstrema lokalne funkcji"},
-          {"number": 15, "name": "Największa i najmniejsza wartość funkcji w przedziale"},
-          {"number": 16, "name": "Zadania optymalizacyjne"},
-          {"number": 17, "name": "Zadania powtórzeniowe do rozdziału 6"}
-        ]
+         "name": "Elementy analizy matematycznej",
+         "number": 6,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Granica funkcji w punkcie"
+            },
+            {
+               "number": 2,
+               "name": "Obliczanie granicy funkcji w punkcie"
+            },
+            {
+               "number": 3,
+               "name": "Granice jednostronne funkcji w punkcie"
+            },
+            {
+               "number": 4,
+               "name": "Granica funkcji w nieskończoności"
+            },
+            {
+               "number": 5,
+               "name": "Granica niewłaściwa funkcji"
+            },
+            {
+               "number": 6,
+               "name": "Ciągłość funkcji w punkcie"
+            },
+            {
+               "number": 7,
+               "name": "Ciągłość funkcji w zbiorze"
+            },
+            {
+               "number": 8,
+               "name": "Asymptoty wykresu funkcji"
+            },
+            {
+               "number": 9,
+               "name": "Pochodna funkcji w punkcie"
+            },
+            {
+               "number": 10,
+               "name": "Funkcja pochodna"
+            },
+            {
+               "number": 11,
+               "name": "Funkcja złożona. Pochodna funkcji złożonej"
+            },
+            {
+               "number": 12,
+               "name": "Styczna do wykresu funkcji"
+            },
+            {
+               "number": 13,
+               "name": "Pochodna funkcji a monotonicznośc funkcji"
+            },
+            {
+               "number": 14,
+               "name": "Ekstrema lokalne funkcji"
+            },
+            {
+               "number": 15,
+               "name": "Największa i najmniejsza wartość funkcji w przedziale"
+            },
+            {
+               "number": 16,
+               "name": "Zadania optymalizacyjne"
+            },
+            {
+               "number": 17,
+               "name": "Zadania powtórzeniowe do rozdziału 6"
+            }
+         ]
       },
       {
-        "number": 7,
-        "name": "Trygonometria",
-        "subchapters": [
-          {"number": 1, "name": "Funkcje trygonometryczne zmiennej rzeczywistej - powtórzenie wiadomości z klasy 2"},
-          {"number": 2, "name": "Przekształcenia wykresów funkcji trygonometrycznych"},
-          {"number": 3, "name": "Równania trygonometryczne cz. 1"},
-          {"number": 4, "name": "Funkcje trygonometryczne sumy i różnicy"},
-          {"number": 5, "name": "Funkcje trygonometryczne wielokrotności kąta"},
-          {"number": 6, "name": "Sumy i różnice funkcji trygonometrycznych"},
-          {"number": 7, "name": "Równania trygonometryczne cz. 2"},
-          {"number": 8, "name": "Nierówności trygonometryczne"},
-          {"number": 9, "name": "Pochodne funkcji trygonometrycznych"},
-          {"number": 10, "name": "Zadania powtórzeniowe do rozdziału 7"}
-        ]
+         "name": "Trygonometria",
+         "number": 7,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Funkcje trygonometryczne zmiennej rzeczywistej - powtórzenie"
+            },
+            {
+               "number": 2,
+               "name": "Przekształcenia wykresów funkcji trygonometrycznych"
+            },
+            {
+               "number": 3,
+               "name": "Równania trygonometryczne cz. 1"
+            },
+            {
+               "number": 4,
+               "name": "Funkcje trygonometryczne sumy i różnicy"
+            },
+            {
+               "number": 5,
+               "name": "Funkcje trygonometryczne wielokrotności kąta"
+            },
+            {
+               "number": 6,
+               "name": "Sumy i różnice funkcji trygonometrycznych"
+            },
+            {
+               "number": 7,
+               "name": "Równania trygonometryczne cz. 2"
+            },
+            {
+               "number": 8,
+               "name": "Nierówności trygonometryczne"
+            },
+            {
+               "number": 9,
+               "name": "Pochodne funkcji trygonometrycznych"
+            },
+            {
+               "number": 10,
+               "name": "Zadania powtórzeniowe do rozdziału 7"
+            }
+         ]
       },
       {
-        "number": 8,
-        "name": "Geometria analityczna",
-        "subchapters": [
-          {"number": 1, "name": "Wektor w układzie współrzędnych. Podział odcinka"},
-          {"number": 2, "name": "Kąt między niezerowymi wektorami"},
-          {"number": 3, "name": "Proste w układzie współrzędnych"},
-          {"number": 4, "name": "Odległość punktu od prostej"},
-          {"number": 5, "name": "Odległość między dwiema prostymi równoległymi"},
-          {"number": 6, "name": "Pole trójkąta. Pole wielokąta"},
-          {"number": 7, "name": "Równanie okręgu. Wzajemne położenie prostej i okręgu"},
-          {"number": 8, "name": "Wzajemne położenie dwóch okręgów"},
-          {"number": 9, "name": "Zadania różne z geometrii analitycznej"},
-          {"number": 10, "name": "Wybrane przekształcenia geometryczne w układzie współrzędnych"},
-          {"number": 11, "name": "Zastosowanie analizy matematycznej w rozwiązywaniu zadań z geometrii analitycznej"},
-          {"number": 12, "name": "Zadania powtórzeniowe do rozdziału 8"}
-        ]
+         "name": "Geometria analityczna",
+         "number": 8,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Wektor w układzie współrzędnych. Podział odcinka"
+            },
+            {
+               "number": 2,
+               "name": "Kąt między niezerowymi wektorami"
+            },
+            {
+               "number": 3,
+               "name": "Proste w układzie współrzędnych"
+            },
+            {
+               "number": 4,
+               "name": "Odległość punktu od prostej"
+            },
+            {
+               "number": 5,
+               "name": "Odległość między dwiema prostymi równoległymi"
+            },
+            {
+               "number": 6,
+               "name": "Pole trójkąta. Pole wielokąta"
+            },
+            {
+               "number": 7,
+               "name": "Równanie okręgu. Wzajemne położenie prostej i okręgu"
+            },
+            {
+               "number": 8,
+               "name": "Wzajemne położenie dwóch okręgów"
+            },
+            {
+               "number": 9,
+               "name": "Zadania różne z geometrii analitycznej"
+            },
+            {
+               "number": 10,
+               "name": "Wybrane przekształcenia geometryczne w układzie współrzędnych"
+            },
+            {
+               "number": 11,
+               "name": "Zastosowanie analizy matematycznej w rozwiązywaniu zadań z geometrii analitycznej"
+            },
+            {
+               "number": 12,
+               "name": "Zadania powtórzeniowe do rozdziału 8"
+            }
+         ]
       }
-    ]
-  },
-  {
-    "name": "Matematyka OE Pazdro 4 poziom rozszerzony",
-    "id": "pazdro_4_1",
-    "chapters": [
+   ]
+
+
+
+
+
+
+
+
+},
+{
+   "name": "Matematyka Pazdro 4, 2019, p. rozszerzony",
+   "id": "pazdro_4_1",
+   "chapters": [
       {
-        "number": 1,
-        "name": "",
-        "subchapters": [
-          {"number": 1, "name": ""},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Funkcja wykładnicza",
+         "number": 1,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Potęga o wykładniku rzeczywistym – powtórzenie "
+            },
+            {
+               "number": 2,
+               "name": "Funkcja wykładnicza i jej własności "
+            },
+            {
+               "number": 3,
+               "name": "Przekształcenia wykresów funkcji wykładniczych "
+            },
+            {
+               "number": 4,
+               "name": "Równania wykładnicze "
+            },
+            {
+               "number": 5,
+               "name": "Nierówności wykładnicze "
+            },
+            {
+               "number": 6,
+               "name": "Zastosowanie własności funkcji wykładniczej w zadaniach "
+            },
+            {
+               "number": 7,
+               "name": "Zadania powtórzeniowe do rozdziału 1. "
+            }
+         ]
       },
       {
-        "number": 2,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Funkcja logarytmiczna",
+         "number": 2,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Logarytm – powtórzenie wiadomości "
+            },
+            {
+               "number": 2,
+               "name": "Funkcja logarytmiczna – powtórzenie i uzupełnienie wiadomości "
+            },
+            {
+               "number": 3,
+               "name": "Przekształcenia wykresów funkcji logarytmicznych "
+            },
+            {
+               "number": 4,
+               "name": "Równania logarytmiczne "
+            },
+            {
+               "number": 5,
+               "name": "Nierówności logarytmiczne "
+            },
+            {
+               "number": 6,
+               "name": "Zastosowanie funkcji wykładniczej i funkcji logarytmiczne"
+            },
+            {
+               "number": 7,
+               "name": "do rozwiązywania zadań umieszczonych w kontekście praktycznym "
+            },
+            {
+               "number": 8,
+               "name": "Zadania powtórzeniowe do rozdziału 2. "
+            }
+         ]
       },
       {
-        "number": 3,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Elementy statystyki",
+         "number": 3,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Sposoby prezentowania danych zebranych w wyniku obserwacj"
+            },
+            {
+               "number": 2,
+               "name": "statystycznej "
+            },
+            {
+               "number": 3,
+               "name": "Średnia z próby "
+            },
+            {
+               "number": 4,
+               "name": "Mediana z próby i moda z próby. Skala centylowa "
+            },
+            {
+               "number": 5,
+               "name": "Wariancja i odchylenie standardowe "
+            },
+            {
+               "number": 6,
+               "name": "Zadania powtórzeniowe do rozdziału 3. "
+            }
+         ]
       },
       {
-        "number": 4,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Rachunek prawdopodobieństwa",
+         "number": 4,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Kombinatoryka – powtórzenie "
+            },
+            {
+               "number": 2,
+               "name": "Doświadczenie losowe "
+            },
+            {
+               "number": 3,
+               "name": "Zdarzenia. Działania na zdarzeniach "
+            },
+            {
+               "number": 4,
+               "name": "Określenie prawdopodobieństwa "
+            },
+            {
+               "number": 5,
+               "name": "Obliczanie prawdopodobieństwa "
+            },
+            {
+               "number": 6,
+               "name": "Doświadczenia losowe wieloetapowe "
+            },
+            {
+               "number": 7,
+               "name": "Prawdopodobieństwo warunkowe "
+            },
+            {
+               "number": 8,
+               "name": "Twierdzenie o prawdopodobieństwie całkowitym. Wzór Bayesa "
+            },
+            {
+               "number": 9,
+               "name": "Niezależność zdarzeń "
+            },
+            {
+               "number": 10,
+               "name": "Schemat Bernoulliego "
+            },
+            {
+               "number": 11,
+               "name": "Zmienna losowa. Wartość oczekiwana zmiennej losowej "
+            },
+            {
+               "number": 12,
+               "name": "Zadania powtórzeniowe do rozdziału 4. "
+            }
+         ]
       },
       {
-        "number": 5,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Geometria przestrzenna. Wielościany",
+         "number": 5,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Płaszczyzny i proste w przestrzeni"
+            },
+            {
+               "number": 2,
+               "name": "Równoległość prostych i płaszczyzn. Proste skośne "
+            },
+            {
+               "number": 3,
+               "name": "Prostopadłość prostych i płaszczyzn w przestrzeni "
+            },
+            {
+               "number": 4,
+               "name": "Rzut równoległy na płaszczyznę"
+            },
+            {
+               "number": 5,
+               "name": "Rysowanie fgur płaskich w rzucie równoległym na płaszczyznę "
+            },
+            {
+               "number": 6,
+               "name": "Twierdzenie o trzech prostych prostopadłych "
+            },
+            {
+               "number": 7,
+               "name": "Kąt między prostą a płaszczyzną. Kąt dwuścienny "
+            },
+            {
+               "number": 8,
+               "name": "Graniastosłupy "
+            },
+            {
+               "number": 9,
+               "name": "Ostrosłupy "
+            },
+            {
+               "number": 10,
+               "name": "Siatka wielościanu. Pole powierzchni wielościanu "
+            },
+            {
+               "number": 11,
+               "name": "Objętość fgury przestrzennej. Objętość wielościanów "
+            },
+            {
+               "number": 12,
+               "name": "Przekroje wielościanów – konstrukcje "
+            },
+            {
+               "number": 13,
+               "name": "Przekroje wielościanów – zadania "
+            },
+            {
+               "number": 14,
+               "name": "Zadania powtórzeniowe do rozdziału 5. "
+            }
+         ]
       },
       {
-        "number": 6,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
-      },
-      {
-        "number": 7,
-        "name": "Liczby rzeczywiste",
-        "subchapters": [
-          {"number": 1, "name": "Liczby naturalne"},
-          {"number": 2, "name": ""},
-          {"number": 3, "name": ""},
-          {"number": 4, "name": ""},
-          {"number": 5, "name": ""},
-          {"number": 6, "name": ""},
-          {"number": 7, "name": ""},
-          {"number": 8, "name": ""},
-          {"number": 9, "name": ""},
-          {"number": 10, "name": ""},
-          {"number": 11, "name": ""},
-          {"number": 12, "name": ""}
-        ]
+         "name": "Geometria przestrzenna. Bryły obrotowe",
+         "number": 6,
+         "subchapters": [
+            {
+               "number": 1,
+               "name": "Walec "
+            },
+            {
+               "number": 2,
+               "name": "Stożek "
+            },
+            {
+               "number": 3,
+               "name": "Kula i sfera "
+            },
+            {
+               "number": 4,
+               "name": "Bryły obrotowe – zadania różne "
+            },
+            {
+               "number": 5,
+               "name": "Podobieństwo fgur w przestrzeni "
+            },
+            {
+               "number": 6,
+               "name": "Zastosowanie analizy matematyczne"
+            },
+            {
+               "number": 7,
+               "name": "w rozwiązywaniu zadań z geometrii przestrzennej "
+            },
+            {
+               "number": 8,
+               "name": "Zadania powtórzeniowe do rozdziału 6. "
+            }
+         ]
       }
-    ]
-  },
+   ]
+},
+
   {
     "name": "Matematyka Nowa Era 1 poziom rozszerzony",
     "id": "nowaera_1_1",
