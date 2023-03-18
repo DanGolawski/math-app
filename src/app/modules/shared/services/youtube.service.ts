@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { filter, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -15,7 +15,9 @@ export class YoutubeService {
   }
 
   public getPlaylistsFromChannel(): Observable<any> {
-    return this.http.get(`${this.youtubeUrl}/playlists?channelId=${this.channelId}&part=snippet&order=date&maxResults=50&key=${environment.apiKey}`)
+    return this.http.get(`${this.youtubeUrl}/playlists?channelId=${this.channelId}&part=snippet&order=date&maxResults=50&key=${environment.apiKey}`).pipe(
+      tap(playlist => console.log(playlist))
+    )
   }
 
   public getVideosFromPlaylist(playlistId: string): Observable<any> {

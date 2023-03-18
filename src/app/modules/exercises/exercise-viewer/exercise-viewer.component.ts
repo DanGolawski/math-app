@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { menuController } from '@ionic/core';
-import { getStorage, ref, list, getDownloadURL, FirebaseStorage } from "firebase/storage";
-import { Exercise } from 'src/app/models/book';
+import { Exercise, Subchapter } from 'src/app/models/book';
+import { ShareService } from '../../shared/services/share.service';
+import { ExercisesService } from '../exercises.service';
 
 @Component({
   selector: 'app-exercise-viewer',
@@ -11,50 +12,32 @@ import { Exercise } from 'src/app/models/book';
 })
 export class ExerciseViewerComponent implements OnInit {
 
-  protected exercises: Exercise[];
-  protected subchapterNumber: number;
-  protected selectedImageUrl: string;
-  protected selectedImageName: string;
+  protected selectedExercise: Exercise;
   protected isLoading = false;
-  protected bookid: string | null;
-  protected chapterNumber: number;
-  private storage: FirebaseStorage;
+  protected exercises: number[];
+  protected selectedSubchapter: Subchapter;
   
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private exercisesService: ExercisesService, private shareService: ShareService) { }
 
   ngOnInit() {
-    this.storage = getStorage();
-    this.getExercises(this.getFolderPath());
+    this.selectedSubchapter = this.shareService.getSubchapter();
+    this.exercises = [...Array(this.selectedSubchapter.numberOfExercises).keys()].map(num => num + this.selectedSubchapter.firstExerciseNumber);
   }
 
-  protected showImage(exercise: Exercise): void {
+  protected showImage(exerciseNumber: number): void {
     this.isLoading = true;
-    this.selectedImageUrl = exercise.url;
-    this.selectedImageName = exercise.name;
+    const chapterDetails = (({ bookId, chapterNumber, number }) => ({ bookId, chapterNumber, number }))(this.selectedSubchapter);
+    this.exercisesService.getExercise(exerciseNumber, chapterDetails).subscribe(exercise => {
+      this.selectedExercise = exercise;
+      if (!exercise.imageUrl) {
+        this.isLoading = false;
+      }
+    });
     menuController.toggle();
   }
 
   protected imageIsLoaded(): void {
     this.isLoading = false;
-  }
-
-  private async getExercises(exercisesPath: string): Promise<void> {
-    const exercisesFolderRef = ref(this.storage, exercisesPath);
-    const exercises = await list(exercisesFolderRef);
-    this.exercises = await Promise.all(exercises.items.map(async exercise => ({id: this.getIdByName(exercise.name) ,name: exercise.name, url: await getDownloadURL(exercise)})));
-    this.exercises.sort((ex1, ex2) => ((ex1.id ?? 0) > (ex2.id ?? 0)) ? 1 : -1);
-    console.log(this.exercises)
-  }
-
-  private getIdByName(exerciseName: string): number {
-    return +exerciseName.split('.')[0]
-  }
-
-  private getFolderPath(): string {
-    this.bookid = this.route.snapshot.paramMap.get('bookid');
-    this.chapterNumber = +(this.route.snapshot.paramMap.get('chapter') ?? '');
-    this.subchapterNumber = +(this.route.snapshot.paramMap.get('subchapter') ?? '');
-    return `${this.bookid}/${this.chapterNumber}/${this.subchapterNumber}`;
   }
 
 }

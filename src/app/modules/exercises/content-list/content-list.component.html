@@ -1,35 +1,29 @@
 <ion-toolbar>
   <ion-buttons slot="start" *ngIf="selectedBook">
-    <ion-button (click)="selectedBook = null">
-      Wróć
-    </ion-button>
+    <ion-button (click)="selectedBook = null">Wróć</ion-button>
   </ion-buttons>
-  <ion-title>Wybierz książkę</ion-title>
+  <ion-title>{{ !selectedBook ? 'Wybierz książkę' : 'Wybierz rozdział'}}</ion-title>
 </ion-toolbar>
 
 <ion-content>
 
   <ng-container *ngIf="!selectedBook; else chapters">
     <ul>
-      <li *ngFor="let book of books" (click)="selectedBook = book">{{ book.name }}</li>
+      <li *ngFor="let book of books" (click)="getChaptersForBook(book)">{{ book.title }}</li>
     </ul>
   </ng-container>
 
   <ng-template #chapters>
     <ion-accordion-group expand="inset">
-      <ion-accordion *ngFor="let chapter of selectedBook.chapters" [value]="chapter.name">
+      <ion-accordion *ngFor="let chapter of bookChapters" [value]="chapter.name">
         <ion-item slot="header" color="light">
           <ion-label>{{ chapter.name }}</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
-          <a *ngFor="let subchapter of chapter.subchapters" [routerLink]="['showexercises', selectedBook.id, chapter.number, subchapter.number]"><p class="subchapter-name">{{ subchapter.number }}. {{ subchapter.name }}</p></a>
+        <p class="subchapter-name" (click)="showExercises(subchapter)" *ngFor="let subchapter of chapter.subchapters">{{ subchapter.number }}.{{ subchapter.name }}</p>
         </div>
       </ion-accordion>
-      
     </ion-accordion-group>
-    <!-- <ul>
-      <a *ngFor="let chapter of selectedBook.chapters" [routerLink]="['showexercises', selectedBook.id, chapter.number]"><li>{{ chapter.name }}</li></a>
-    </ul> -->
   </ng-template>
 
 </ion-content>
