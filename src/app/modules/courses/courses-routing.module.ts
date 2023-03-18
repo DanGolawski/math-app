@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'playlist/:playlistId/play',
     component: VideoPlayerComponent
+  },
+  {
+    path: 'play',
+    component: VideoPlayerComponent
   }
 ];
 
