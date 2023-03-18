@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ContentListComponent
   },
   {
-    path: 'showexercises/:bookid/:chapter/:subchapter',
+    path: 'showexercises',
     component: ExerciseViewerComponent
   }
 ];

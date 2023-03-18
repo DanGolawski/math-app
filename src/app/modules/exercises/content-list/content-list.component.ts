@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from 'src/app/models/book';
+import { Router } from '@angular/router';
+import { BookShort, Chapter, Subchapter } from 'src/app/models/book';
+import { ShareService } from '../../shared/services/share.service';
 import { ExercisesService } from '../exercises.service';
 
 
@@ -10,20 +12,29 @@ import { ExercisesService } from '../exercises.service';
 })
 export class ContentListComponent implements OnInit {
 
-  protected books: Book[];
-  protected selectedBook: any;
+  protected books: BookShort[];
+  protected bookChapters: Chapter[];
+  protected selectedBook: BookShort | null;
   protected imgUrl = '';
 
-  constructor(private exercisesService: ExercisesService) { }
+  constructor(
+    private exercisesService: ExercisesService,
+    private router: Router,
+    private shareService: ShareService) { }
 
   ngOnInit() {
-    this.getBooks();
+    this.exercisesService.getBooks().subscribe(books => this.books = books);
   }
 
-  private getBooks(): void {
-    this.exercisesService.getBooksWithChapters().subscribe(books => {
-      this.books = books
-    });
+  protected getChaptersForBook(book: BookShort): void {
+    this.selectedBook = book;
+    this.exercisesService.getChaptersForBook(book.id).subscribe(chapters => this.bookChapters = chapters);
+  }
+
+  protected showExercises(subchapter: Subchapter): void {
+    this.shareService.setSubchapter(subchapter);
+    this.router.navigateByUrl('exercises/showexercises')
+    // [routerLink]="['showexercises', selectedBook?.id, chapter.number, subchapter.number]"
   }
 
 }

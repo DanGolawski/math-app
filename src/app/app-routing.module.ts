@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ChannelComponent } from './modules/courses/channel/channel.component';
 import { HomePage } from './home/home.page';
-import { PlaylistComponent } from './modules/courses/playlist/playlist.component';
-import { VideoPlayerComponent } from './modules/courses/video-player/video-player.component';
+import { VideoPlayerComponent } from './modules/shared/components/video-player/video-player.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomePage
+  },
+  // {
+  //   path: 'player',
+  //   component: VideoPlayerComponent
+  // },
+  {
+    path: 'self-improvement',
+    loadChildren: () => import('./modules/self-improvement/self-improvement.module').then(m => m.SelfImprovementModule)
   },
   {
     path: 'exercises',

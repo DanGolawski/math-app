@@ -5,6 +5,7 @@ import { ExercisesRoutingModule } from './exercises-routing.module';
 import { IonicModule } from '@ionic/angular';
 import { ExerciseViewerComponent } from './exercise-viewer/exercise-viewer.component';
 import { PipesModule } from 'src/app/pipes/pipes.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -14,7 +15,8 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
     CommonModule,
     IonicModule,
     ExercisesRoutingModule,
-    PipesModule
+    PipesModule,
+    SharedModule
   ],
   providers: []
 })

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ShareService } from '../modules/shared/services/share.service';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +13,10 @@ export class HomePage implements OnInit{
   protected videoList: any;
   protected showStartScreen = true;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute, private shareService: ShareService) {}
 
   ngOnInit(): void {
+    this.shareService.setVideoSrc('chuj')
     setTimeout(() => this.showStartScreen = false, 2000);
   }
 

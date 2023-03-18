@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
+import { ShareService } from '../../services/share.service';
 
 @Component({
   selector: 'app-video-player',
@@ -12,13 +13,14 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
   protected videoId?: string;
   protected url = ''
 
-  constructor(private route: ActivatedRoute, private screenOrientation: ScreenOrientation) { }
+  constructor(
+    private screenOrientation: ScreenOrientation,
+    private shareService: ShareService
+  ) { }
 
   ngOnInit() {
     this.screenOrientation.lock('landscape');
-    this.route.queryParams.subscribe((params: any) => {
-      this.url = `https://www.youtube.com/embed/${params.videoId}`
-    });
+    this.url = this.shareService.getVideoSrc()
   }
 
   ngOnDestroy(): void {

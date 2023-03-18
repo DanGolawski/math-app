@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { YoutubeService } from '../../../youtube.service';
+import { YoutubeService } from '../../shared/services/youtube.service';
 
 @Component({
   selector: 'app-playlist',

@@ -6,8 +6,8 @@
   </ion-header>
   <ion-content class="ion-padding">
     <p *ngIf="!exercises?.length">Te zadania będą niedługo :)</p>
-    <ul>
-      <li *ngFor="let exercise of exercises" (click)="showImage(exercise)">{{ subchapterNumber }}.{{ exercise.name | extension }}</li>
+    <ul *ngIf="exercises.length">
+      <li *ngFor="let exerciseNumber of exercises" (click)="showImage(exerciseNumber)">{{ selectedSubchapter.number }}.{{ exerciseNumber }}</li>
     </ul>
   </ion-content>
 </ion-menu>
@@ -24,22 +24,21 @@
   </ion-header>
   <ion-content class="main-content">
     <ng-container>
-      <h1 class="info-message" *ngIf="!selectedImageUrl; else exerciseImage">Wybierz zadanie z menu</h1>
+      <img width="100vw" src="assets/images/choseexercise.gif" *ngIf="!selectedExercise; else exerciseImage">
       <br>
-      <br>
-      <h3>Brakuje zadania? Błąd?</h3>
-      <p class="info-message">Napisz do nas. Rozwiązanie umieścimy nawet tego samego dnia!</p>
-      <a href="mailto:mathmasters.contact@gmail.com?subject=Zadanie&body=Proszę o rozwiązanie zadania. Książka: {{bookid || '[WPISZ]'}}, rozdział: {{chapterNumber || '[WPISZ]'}}, temat: {{subchapterNumber || '[WPISZ]'}}, zadanie: {{selectedImageName || '[WPISZ]'}}">
+      <p *ngIf="selectedExercise?.imageUrl">Jakiś błąd?</p>
+      <a *ngIf="selectedExercise" href="mailto:mathmasters.contact@gmail.com?subject=Zadanie&body=Proszę o rozwiązanie zadania. Książka: {{ selectedSubchapter?.bookId || '[WPISZ]'}}, rozdział: {{selectedSubchapter?.chapterNumber || '[WPISZ]'}}, temat: {{selectedSubchapter?.number || '[WPISZ]'}}, zadanie: {{selectedExercise?.number || '[WPISZ]'}}">
         <ion-button>
           <ion-icon slot="start" name="mail-outline"></ion-icon>
-          Napisz do nas
+          Napisz do nas!
         </ion-button>
       </a>
       <br>
     </ng-container>
     
     <ng-template #exerciseImage>
-      <img [src]="selectedImageUrl" (load)="imageIsLoaded()">
+      <img *ngIf="!!selectedExercise?.imageUrl" [src]="selectedExercise?.imageUrl" (load)="imageIsLoaded()">
+      <img width="100vw" *ngIf="!selectedExercise?.imageUrl" src="assets/images/noexercise.gif">
     </ng-template>
     <div class="loading"></div>
   </ion-content>
