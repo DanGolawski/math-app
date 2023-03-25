@@ -6,13 +6,15 @@ import { SelfImprovementMenuComponent } from './self-improvement-menu/self-impro
 import { IonicModule } from '@ionic/angular';
 import { SelfImprovementRoutingModule } from './self-improvement-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { SingleBookComponent } from './single-book/single-book.component';
 
 
 @NgModule({
   declarations: [
     SelfImprovementMenuComponent,
     VideosComponent,
-    BooksComponent
+    BooksComponent,
+    SingleBookComponent
   ],
   imports: [
     SelfImprovementRoutingModule,

@@ -15,9 +15,7 @@ export class YoutubeService {
   }
 
   public getPlaylistsFromChannel(): Observable<any> {
-    return this.http.get(`${this.youtubeUrl}/playlists?channelId=${this.channelId}&part=snippet&order=date&maxResults=50&key=${environment.apiKey}`).pipe(
-      tap(playlist => console.log(playlist))
-    )
+    return this.http.get(`${this.youtubeUrl}/playlists?channelId=${this.channelId}&part=snippet&order=date&maxResults=50&key=${environment.apiKey}`);
   }
 
   public getVideosFromPlaylist(playlistId: string): Observable<any> {

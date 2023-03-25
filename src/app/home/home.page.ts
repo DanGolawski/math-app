@@ -16,7 +16,6 @@ export class HomePage implements OnInit{
   constructor(private http: HttpClient, private route: ActivatedRoute, private shareService: ShareService) {}
 
   ngOnInit(): void {
-    this.shareService.setVideoSrc('chuj')
     setTimeout(() => this.showStartScreen = false, 2000);
   }
 

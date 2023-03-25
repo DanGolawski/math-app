@@ -34,7 +34,6 @@ export class ContentListComponent implements OnInit {
   protected showExercises(subchapter: Subchapter): void {
     this.shareService.setSubchapter(subchapter);
     this.router.navigateByUrl('exercises/showexercises')
-    // [routerLink]="['showexercises', selectedBook?.id, chapter.number, subchapter.number]"
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecommendedBook } from 'src/app/models/book';
+import { MathAppApiService } from '../../shared/services/math-app-api.service';
 
 @Component({
   selector: 'app-books',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  constructor() { }
+  protected books: RecommendedBook[];
 
-  ngOnInit() {}
+  constructor(private apiService: MathAppApiService) { }
+
+  ngOnInit() {
+    this.apiService.getRecommendedBooks().subscribe(books => this.books = books);
+  }
 
 }

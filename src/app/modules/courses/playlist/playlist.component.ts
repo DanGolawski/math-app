@@ -27,7 +27,7 @@ export class PlaylistComponent implements OnInit {
   }
 
   protected openVideo(videoId: string): void {
-    this.shareService.setVideoSrc(`https://www.youtube.com/embed/${videoId}`);
+    this.shareService.setVideoSrc(`${environment.youtubeEmbeded}/${videoId}`);
     this.router.navigate(['play'], { relativeTo: this.route})
   }
 

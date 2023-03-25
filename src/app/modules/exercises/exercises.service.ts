@@ -1,8 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { BookShort, Chapter, Exercise } from 'src/app/models/book';
-import { environment } from 'src/environments/environment';
+import { endpoints } from 'src/environments/endpoints';
 
 @Injectable({
   providedIn: 'root'
@@ -12,20 +12,22 @@ export class ExercisesService {
   constructor(private http: HttpClient) { }
 
   public getBooks(): Observable<BookShort[]> {
-    return this.http.get<BookShort[]>(`${environment.mathAppApi}/books`);
+    return this.http.get<BookShort[]>(endpoints.books);
   }
 
   public getChaptersForBook(bookId: string): Observable<Chapter[]> {
-    return this.http.get<Chapter[]>(`${environment.mathAppApi}/book-chapters?bookId=${bookId}`);
+    return this.http.get<Chapter[]>(endpoints.chapters(bookId));
   }
 
   public getExercise(exerciseNumber: number, subchapterDetails: {bookId: string, chapterNumber: number, number: number}): Observable<Exercise> {
     const queryParams = {
       number: exerciseNumber,
-      book: subchapterDetails.bookId,
-      chapter: subchapterDetails.chapterNumber,
-      subchapter: subchapterDetails.number
+      bookId: subchapterDetails.bookId,
+      chapterNumber: subchapterDetails.chapterNumber,
+      subchapterNumber: subchapterDetails.number
     }
-    return this.http.get<Exercise>(`${environment.mathAppApi}/exercises`, {params: new HttpParams({fromObject: queryParams})});
+    return this.http.get<Exercise[]>(endpoints.exercises, {params: new HttpParams({fromObject: queryParams})}).pipe(
+      map((exercises: Exercise[]) => exercises.length ? exercises[0] : {} as Exercise)
+    );
   }
 }
