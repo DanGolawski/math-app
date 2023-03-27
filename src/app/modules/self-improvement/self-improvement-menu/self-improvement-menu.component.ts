@@ -11,7 +11,6 @@ export class SelfImprovementMenuComponent implements OnInit {
   constructor(private shareService: ShareService) { }
 
   ngOnInit() {
-    console.log(this.shareService.getVideoSrc())
   }
 
 }

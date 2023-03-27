@@ -3,8 +3,8 @@
     
     <div class="list-item-container" *ngFor="let video of videos" (click)="playVideo(video)">
       <div class="list-item-content">
-        <p class="list-item-title">{{ 'Moje finansowe błędy' }}</p>
-        <p>{{ 'Marcin Iwuć' }}</p>
+        <p class="list-item-title">{{ video.title }}</p>
+        <p>{{ video.author }}</p>
       </div>
       <ion-icon class="play-icon" name="caret-forward-circle-outline"></ion-icon>
     </div>

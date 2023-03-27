@@ -1,0 +1,19 @@
+
+<ng-container *ngIf="exerciseData.imageUrl; else noImage">
+  <img [src]="exerciseData?.imageUrl" (load)="imageIsLoaded()">
+  <br>
+  <!-- todo: podpiąć pod shared service, dodać waiting screen do listy książek -->
+  <div class="additional-elements">
+    <ion-button (click)="openVideo(exerciseData.videoUrl)">
+      <ion-icon slot="start" name="film-outline"></ion-icon>
+      Film z wyjaśnieniem
+    </ion-button>
+    <br>
+    <p>Jakiś błąd?</p>
+  </div>
+</ng-container>
+
+<ng-template #noImage>
+  <img width="100vw" #noImage src="assets/images/noexercise.gif" class="no-exercise-img">
+</ng-template>
+

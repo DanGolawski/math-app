@@ -6,11 +6,12 @@ import { IonicModule } from '@ionic/angular';
 import { ExerciseViewerComponent } from './exercise-viewer/exercise-viewer.component';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 import { SharedModule } from '../shared/shared.module';
+import { SingleExerciseComponent } from './single-exercise/single-exercise.component';
 
 
 
 @NgModule({
-  declarations: [ContentListComponent, ExerciseViewerComponent],
+  declarations: [ContentListComponent, ExerciseViewerComponent, SingleExerciseComponent],
   imports: [
     CommonModule,
     IonicModule,

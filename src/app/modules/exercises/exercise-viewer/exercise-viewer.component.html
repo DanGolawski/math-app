@@ -25,8 +25,6 @@
   <ion-content class="main-content">
     <ng-container>
       <img width="100vw" src="assets/images/choseexercise.gif" *ngIf="!selectedExercise; else exerciseImage">
-      <br>
-      <p *ngIf="selectedExercise?.imageUrl">Jakiś błąd?</p>
       <a *ngIf="selectedExercise" href="mailto:mathmasters.contact@gmail.com?subject=Zadanie&body=Proszę o rozwiązanie zadania. Książka: {{ selectedSubchapter?.bookId || '[WPISZ]'}}, rozdział: {{selectedSubchapter?.chapterNumber || '[WPISZ]'}}, temat: {{selectedSubchapter?.number || '[WPISZ]'}}, zadanie: {{selectedExercise?.number || '[WPISZ]'}}">
         <ion-button>
           <ion-icon slot="start" name="mail-outline"></ion-icon>
@@ -37,9 +35,7 @@
     </ng-container>
     
     <ng-template #exerciseImage>
-      <img *ngIf="!!selectedExercise?.imageUrl" [src]="selectedExercise?.imageUrl" (load)="imageIsLoaded()">
-      <img width="100vw" *ngIf="!selectedExercise?.imageUrl" src="assets/images/noexercise.gif">
+      <app-single-exercise [exerciseData]="selectedExercise" (imageLoaded)="imageIsLoaded()"></app-single-exercise>
     </ng-template>
-    <div class="loading"></div>
   </ion-content>
 </div>

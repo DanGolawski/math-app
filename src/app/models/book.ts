@@ -26,12 +26,18 @@ export interface Subchapter {
 }
 
 export interface Exercise {
-  number: string;
+  bookId: string;
+  chapterNumber: number;
+  subchapterNumber: number;
+  number: number;
   imageUrl: string;
+  videoUrl: string;
+  identifier: string;
 }
 
 export interface RecommendedBook {
   id: number;
   title: string;
   author: string;
+  imageUrl: string;
 }

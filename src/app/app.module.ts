@@ -16,6 +16,7 @@ import { HomePage } from './home/home.page';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { SharedModule } from './modules/shared/shared.module';
+import { ApiInterceptor } from './interceptors/api-interceptor';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -46,7 +47,8 @@ import { SharedModule } from './modules/shared/shared.module';
   ],
   providers: [
     ScreenOrientation,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
 })

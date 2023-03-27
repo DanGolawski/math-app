@@ -1,3 +1,5 @@
-<p>
-  books works!
-</p>
+<ion-content>
+  <app-single-book *ngFor="let book of books" [bookData]="book"></app-single-book>
+  <img *ngIf="!books" class="waitingscreen" [src]="'assets/images/loadingscreen.gif'">
+
+</ion-content>

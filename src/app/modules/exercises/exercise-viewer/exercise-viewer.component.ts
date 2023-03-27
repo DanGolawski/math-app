@@ -17,7 +17,7 @@ export class ExerciseViewerComponent implements OnInit {
   protected exercises: number[];
   protected selectedSubchapter: Subchapter;
   
-  constructor(private route: ActivatedRoute, private exercisesService: ExercisesService, private shareService: ShareService) { }
+  constructor(private exercisesService: ExercisesService, private shareService: ShareService) { }
 
   ngOnInit() {
     this.selectedSubchapter = this.shareService.getSubchapter();
