@@ -16,6 +16,7 @@ export class ContentListComponent implements OnInit {
   protected bookChapters: Chapter[];
   protected selectedBook: BookShort | null;
   protected imgUrl = '';
+  protected isLoading = true;
 
   constructor(
     private exercisesService: ExercisesService,
@@ -23,7 +24,10 @@ export class ContentListComponent implements OnInit {
     private shareService: ShareService) { }
 
   ngOnInit() {
-    this.exercisesService.getBooks().subscribe(books => this.books = books);
+    this.exercisesService.getBooks().subscribe(books => {
+      this.books = books;
+      this.isLoading = false;
+    });
   }
 
   protected getChaptersForBook(book: BookShort): void {
