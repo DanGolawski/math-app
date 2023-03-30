@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Wybierz playlistę
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="main-container">
+<ion-content color="primary">
+  <!-- <div class="main-container">
     <div class="playlists-container" *ngIf="playlists">
       <div *ngFor="let playlist of playlists" class="playlist">
         <a [routerLink]="['playlist', playlist.id]">
@@ -18,6 +18,11 @@
         </a>
       </div>
     </div>
+  </div> -->
+  <div class="menu-container">
+    <a *ngFor="let playlist of playlists" [routerLink]="['playlist', playlist.id]">
+      <app-button [title]="playlist.snippet.title"></app-button>
+    </a>
   </div>
 </ion-content>
 

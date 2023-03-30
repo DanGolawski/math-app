@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Filmy
     </ion-title>
@@ -7,12 +7,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-  <div class="video-item" *ngFor="let video of videoList" (click)="openVideo(video.snippet.resourceId.videoId)">
-    <img class="thumbnail" src="{{ video.snippet.thumbnails.medium.url }}">
-    <div class="video-title">
-      <p>{{ video.snippet.title }}</p>
-    </div>
+  <div class="menu-container">
+    <app-button *ngFor="let video of videoList" [title]="video.snippet.title" [thumbnailUrl]="video.snippet.thumbnails.medium.url" [fullWidth]="true" (click)="openVideo(video.snippet.resourceId.videoId)"></app-button>
   </div>
 </ion-content>
 

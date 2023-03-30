@@ -17,18 +17,18 @@ export interface Chapter {
 
 export interface Subchapter {
   id: number;
-  bookId: string;
-  chapterNumber: number;
+  bookid: string;
+  chapternumber: number;
   number: number;
   name: string;
-  numberOfExercises: number;
-  firstExerciseNumber: number;
+  numberofexercises: number;
+  firstexercisenumber: number;
 }
 
 export interface Exercise {
-  bookId: string;
-  chapterNumber: number;
-  subchapterNumber: number;
+  bookid: string;
+  chapternumber: number;
+  subchapternumber: number;
   number: number;
   imageUrl: string;
   videoUrl: string;
@@ -39,5 +39,5 @@ export interface RecommendedBook {
   id: number;
   title: string;
   author: string;
-  imageUrl: string;
+  imageurl: string;
 }

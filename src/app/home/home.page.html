@@ -1,38 +1,23 @@
-<ion-content>
+<ion-content color="primary">
+  <div class="logo-container">
+    <img src="assets/icon/logo.png" class="logo">
+  </div>
   <div class="menu-container">
     <a routerLink="/onboarding">
-      <div class="menu-item">
-        <ion-icon name="phone-portrait-outline"></ion-icon>
-        <h3 class="menu-item-title">iOS-instalacja</h3>
-      </div>
+      <app-button id="open-modal" [title]="'iOS-instalacja'" [iconName]="'phone-portrait-outline'"></app-button>
     </a>
+    <app-button id="open-modal" [title]="'Korepetycje'" [iconName]="'school-outline'"></app-button>
     <a routerLink="/exercises">
-      <div class="menu-item">
-        <ion-icon name="create-outline"></ion-icon>
-        <h3 class="menu-item-title">Zadania</h3>
-      </div>
+      <app-button [title]="'Zadania'" [iconName]="'create-outline'"></app-button>
     </a>
     <a routerLink="/courses">
-      <div class="menu-item">
-        <ion-icon name="caret-forward-circle-outline"></ion-icon>
-        <h3 class="menu-item-title">Tutoriale</h3>
-      </div>
+      <app-button [title]="'Tutoriale'" [iconName]="'caret-forward-circle-outline'"></app-button>
     </a>
-    <div class="menu-item" id="open-modal">
-      <ion-icon name="school-outline"></ion-icon>
-      <h3 class="menu-item-title">Korepetycje</h3>
-    </div>
     <a routerLink="/self-improvement">
-      <div class="menu-item">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        <h3 class="menu-item-title">Rozwój osobisty</h3>
-      </div>
+      <app-button [title]="'Rozwój osobisty'" [iconName]="'trending-up-outline'"></app-button>
     </a>
     <a href="https://www.instagram.com/math.masters.matematyka/">
-      <div class="menu-item">
-        <ion-icon name="logo-instagram"></ion-icon>
-        <h3 class="menu-item-title">Instagram</h3>
-      </div>
+      <app-button [title]="'Instagram'" [iconName]="'logo-instagram'"></app-button>
     </a>
   </div>
 
@@ -56,4 +41,4 @@
   </ion-modal>
 </ion-content>
 
-<img *ngIf="showStartScreen" class="waitingscreen" [src]="'assets/images/startscreen.gif'">
+<div *ngIf="showStartScreen" class="startscreen"></div>

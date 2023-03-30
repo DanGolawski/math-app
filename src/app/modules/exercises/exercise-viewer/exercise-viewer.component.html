@@ -1,6 +1,6 @@
 <ion-menu contentId="main-content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-title>Zadania</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -14,7 +14,7 @@
 
 <div class="ion-page" id="main-content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -25,7 +25,7 @@
   <ion-content class="main-content">
     <ng-container>
       <img width="100vw" src="assets/images/choseexercise.gif" *ngIf="!selectedExercise; else exerciseImage">
-      <a *ngIf="selectedExercise" href="mailto:mathmasters.contact@gmail.com?subject=Zadanie&body=Proszę o rozwiązanie zadania. Książka: {{ selectedSubchapter?.bookId || '[WPISZ]'}}, rozdział: {{selectedSubchapter?.chapterNumber || '[WPISZ]'}}, temat: {{selectedSubchapter?.number || '[WPISZ]'}}, zadanie: {{selectedExercise?.number || '[WPISZ]'}}">
+      <a *ngIf="selectedExercise" href="mailto:mathmasters.contact@gmail.com?subject=Zadanie&body=Proszę o rozwiązanie zadania. Książka: {{ selectedSubchapter?.bookid || '[WPISZ]'}}, rozdział: {{selectedSubchapter?.chapternumber || '[WPISZ]'}}, temat: {{selectedSubchapter?.number || '[WPISZ]'}}, zadanie: {{selectedExercise?.number || '[WPISZ]'}}">
         <ion-button>
           <ion-icon slot="start" name="mail-outline"></ion-icon>
           Napisz do nas!

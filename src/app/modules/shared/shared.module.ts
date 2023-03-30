@@ -4,15 +4,16 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
 import { IonicModule } from '@ionic/angular';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 import { ShareService } from './services/share.service';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
-  declarations: [VideoPlayerComponent],
+  declarations: [VideoPlayerComponent, ButtonComponent],
   imports: [
     CommonModule,
     IonicModule,
     PipesModule
   ],
-  exports: [VideoPlayerComponent],
+  exports: [VideoPlayerComponent, ButtonComponent],
   providers: [ShareService]
 })
 export class SharedModule { }

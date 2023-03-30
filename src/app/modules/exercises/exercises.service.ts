@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { BookShort, Chapter, Exercise } from 'src/app/models/book';
+import { BookShort, Chapter, Exercise, Subchapter } from 'src/app/models/book';
 import { endpoints } from 'src/environments/endpoints';
 
 @Injectable({
@@ -19,11 +19,11 @@ export class ExercisesService {
     return this.http.get<Chapter[]>(endpoints.chapters(bookId));
   }
 
-  public getExercise(exerciseNumber: number, subchapterDetails: {bookId: string, chapterNumber: number, number: number}): Observable<Exercise> {
+  public getExercise(exerciseNumber: number, subchapterDetails: Partial<Subchapter>): Observable<Exercise> {
     const queryParams = {
       number: exerciseNumber,
-      bookId: subchapterDetails.bookId,
-      chapterNumber: subchapterDetails.chapterNumber,
+      bookId: subchapterDetails.bookid,
+      chapterNumber: subchapterDetails.chapternumber,
       subchapterNumber: subchapterDetails.number
     }
     return this.http.get<Exercise[]>(endpoints.exercises, {params: new HttpParams({fromObject: queryParams})}).pipe(
