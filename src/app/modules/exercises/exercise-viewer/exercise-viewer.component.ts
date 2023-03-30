@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { menuController } from '@ionic/core';
 import { Exercise, Subchapter } from 'src/app/models/book';
 import { ShareService } from '../../shared/services/share.service';
@@ -21,12 +20,12 @@ export class ExerciseViewerComponent implements OnInit {
 
   ngOnInit() {
     this.selectedSubchapter = this.shareService.getSubchapter();
-    this.exercises = [...Array(this.selectedSubchapter.numberOfExercises).keys()].map(num => num + this.selectedSubchapter.firstExerciseNumber);
+    this.exercises = Array.from({length: this.selectedSubchapter.numberofexercises}, (x, i) => i).map(num => num + this.selectedSubchapter.firstexercisenumber);
   }
 
   protected showImage(exerciseNumber: number): void {
     this.isLoading = true;
-    const chapterDetails = (({ bookId, chapterNumber, number }) => ({ bookId, chapterNumber, number }))(this.selectedSubchapter);
+    const chapterDetails = (({ bookid, chapternumber, number }) => ({ bookid, chapternumber, number }))(this.selectedSubchapter);
     this.exercisesService.getExercise(exerciseNumber, chapterDetails).subscribe(exercise => {
       this.selectedExercise = exercise;
       if (!exercise.imageUrl) {

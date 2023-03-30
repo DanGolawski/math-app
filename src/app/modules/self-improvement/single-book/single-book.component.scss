@@ -1,10 +1,11 @@
 .container {
    width: 94vw;
    margin: 3vw;
-   background: white;
+   background: rgba(255, 255, 255, 0.4);
    border-radius: 20px;
    margin-bottom: 10px;
    padding: 5%;
+   color: white;
 }
 
 .image {
@@ -18,5 +19,5 @@
 
 .title {
    font-weight: bold;
-   font-size: 1.2rem;
+   font-size: 1.4rem;
 }
