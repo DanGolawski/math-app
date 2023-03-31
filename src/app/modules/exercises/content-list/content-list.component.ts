@@ -32,7 +32,11 @@ export class ContentListComponent implements OnInit {
 
   protected getChaptersForBook(book: BookShort): void {
     this.selectedBook = book;
-    this.exercisesService.getChaptersForBook(book.id).subscribe(chapters => this.bookChapters = chapters);
+    this.isLoading = true;
+    this.exercisesService.getChaptersForBook(book.id).subscribe(chapters => {
+      this.bookChapters = chapters;
+      this.isLoading = false;
+    });
   }
 
   protected showExercises(subchapter: Subchapter): void {

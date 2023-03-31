@@ -30,8 +30,8 @@ export interface Exercise {
   chapternumber: number;
   subchapternumber: number;
   number: number;
-  imageUrl: string;
-  videoUrl: string;
+  imageurl: string;
+  videourl: string;
   identifier: string;
 }
 
