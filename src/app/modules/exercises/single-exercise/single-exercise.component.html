@@ -1,13 +1,11 @@
 
-<ng-container *ngIf="exerciseData.imageUrl; else noImage">
-  <img [src]="exerciseData?.imageUrl" (load)="imageIsLoaded()">
+<ng-container *ngIf="exerciseData.imageurl; else noImage">
+  <img [src]="exerciseData?.imageurl" (load)="imageIsLoaded()">
   <br>
-  <!-- todo: podpiąć pod shared service, dodać waiting screen do listy książek -->
   <div class="additional-elements">
-    <ion-button (click)="openVideo(exerciseData.videoUrl)">
-      <ion-icon slot="start" name="film-outline"></ion-icon>
-      Film z wyjaśnieniem
-    </ion-button>
+    <div class="menu-container">
+      <app-button [title]="'Film z wyjaśnieniem'" [iconName]="'film-outline'" (click)="openVideo(exerciseData.videourl)" [fullWidth]="true"></app-button>
+    </div>
     <br>
     <p>Jakiś błąd?</p>
   </div>

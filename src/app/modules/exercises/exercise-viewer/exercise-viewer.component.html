@@ -26,10 +26,7 @@
     <ng-container>
       <img width="100vw" src="assets/images/choseexercise.gif" *ngIf="!selectedExercise; else exerciseImage">
       <a *ngIf="selectedExercise" href="mailto:mathmasters.contact@gmail.com?subject=Zadanie&body=Proszę o rozwiązanie zadania. Książka: {{ selectedSubchapter?.bookid || '[WPISZ]'}}, rozdział: {{selectedSubchapter?.chapternumber || '[WPISZ]'}}, temat: {{selectedSubchapter?.number || '[WPISZ]'}}, zadanie: {{selectedExercise?.number || '[WPISZ]'}}">
-        <ion-button>
-          <ion-icon slot="start" name="mail-outline"></ion-icon>
-          Napisz do nas!
-        </ion-button>
+        <app-button [title]="'Napisz do nas!'" [iconName]="'mail-outline'"></app-button>
       </a>
       <br>
     </ng-container>

@@ -28,7 +28,7 @@ export class ExerciseViewerComponent implements OnInit {
     const chapterDetails = (({ bookid, chapternumber, number }) => ({ bookid, chapternumber, number }))(this.selectedSubchapter);
     this.exercisesService.getExercise(exerciseNumber, chapterDetails).subscribe(exercise => {
       this.selectedExercise = exercise;
-      if (!exercise.imageUrl) {
+      if (!exercise.imageurl) {
         this.isLoading = false;
       }
     });
