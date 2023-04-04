@@ -24,18 +24,24 @@ export class ContentListComponent implements OnInit {
     private shareService: ShareService) { }
 
   ngOnInit() {
-    this.exercisesService.getBooks().subscribe(books => {
-      this.books = books;
-      this.isLoading = false;
+    this.exercisesService.getBooks().subscribe({
+      next: books => {
+        this.books = books;
+        this.isLoading = false;
+      },
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
     });
   }
 
   protected getChaptersForBook(book: BookShort): void {
     this.selectedBook = book;
     this.isLoading = true;
-    this.exercisesService.getChaptersForBook(book.id).subscribe(chapters => {
-      this.bookChapters = chapters;
-      this.isLoading = false;
+    this.exercisesService.getChaptersForBook(book.id).subscribe({
+      next: chapters => {
+        this.bookChapters = chapters;
+        this.isLoading = false;
+      },
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
     });
   }
 

@@ -14,7 +14,10 @@ export class BooksComponent implements OnInit {
   constructor(private apiService: MathAppApiService) { }
 
   ngOnInit() {
-    this.apiService.getRecommendedBooks().subscribe(books => this.books = books);
+    this.apiService.getRecommendedBooks().subscribe({
+      next: books => this.books = books,
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
+    });
   }
 
 }

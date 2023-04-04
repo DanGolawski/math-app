@@ -12,6 +12,7 @@ import { ShareService } from '../../shared/services/share.service';
 export class VideosComponent implements OnInit {
 
   protected videos: Video[] = [];
+  protected isLoading = true;
 
   constructor(
     private apiService: MathAppApiService,
@@ -24,8 +25,12 @@ export class VideosComponent implements OnInit {
   }
 
   private getListOfVideos(): void {
-    this.apiService.getVideos().subscribe(videos => {
-      this.videos = videos;
+    this.apiService.getVideos().subscribe({
+      next: videos => {
+        this.videos = videos;
+        this.isLoading = false;
+      },
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
     });
   }
 
