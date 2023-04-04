@@ -32,9 +32,12 @@ export class PlaylistComponent implements OnInit {
   }
 
   private getVideos(playlistId: string): void {
-    this.youtubeService.getVideosFromPlaylist(playlistId).subscribe(videos => {
-      this.videoList = videos.items;
-      this.isLoading = false;
+    this.youtubeService.getVideosFromPlaylist(playlistId).subscribe({
+      next: videos => {
+        this.videoList = videos.items;
+        this.isLoading = false;
+      },
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
     })
   }
 

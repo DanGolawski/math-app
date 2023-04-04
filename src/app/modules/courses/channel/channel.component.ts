@@ -19,9 +19,12 @@ export class ChannelComponent implements OnInit {
   }
 
   private getPlaylists(): void {
-    this.youtubeService.getPlaylistsFromChannel().subscribe(playlists => {
-      this.playlists = playlists.items;
-      this.isLoading = false;
+    this.youtubeService.getPlaylistsFromChannel().subscribe({
+      next: playlists => {
+        this.playlists = playlists.items;
+        this.isLoading = false;
+      },
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`) 
     })
   }
 

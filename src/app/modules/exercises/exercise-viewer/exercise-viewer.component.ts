@@ -26,11 +26,14 @@ export class ExerciseViewerComponent implements OnInit {
   protected showImage(exerciseNumber: number): void {
     this.isLoading = true;
     const chapterDetails = (({ bookid, chapternumber, number }) => ({ bookid, chapternumber, number }))(this.selectedSubchapter);
-    this.exercisesService.getExercise(exerciseNumber, chapterDetails).subscribe(exercise => {
-      this.selectedExercise = exercise;
-      if (!exercise.imageurl) {
-        this.isLoading = false;
-      }
+    this.exercisesService.getExercise(exerciseNumber, chapterDetails).subscribe({
+      next: exercise => {
+        this.selectedExercise = exercise;
+        if (!exercise.imageurl) {
+          this.isLoading = false;
+        }
+      },
+      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
     });
     menuController.toggle();
   }
