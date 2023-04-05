@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 import { ShareService } from './services/share.service';
 import { ButtonComponent } from './components/button/button.component';
+import { NotificationService } from './services/notification.service';
 
 @NgModule({
   declarations: [VideoPlayerComponent, ButtonComponent],
@@ -14,6 +15,6 @@ import { ButtonComponent } from './components/button/button.component';
     PipesModule
   ],
   exports: [VideoPlayerComponent, ButtonComponent],
-  providers: [ShareService]
+  providers: [ShareService, NotificationService]
 })
 export class SharedModule { }

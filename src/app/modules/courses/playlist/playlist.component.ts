@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { NotificationService } from '../../shared/services/notification.service';
 import { ShareService } from '../../shared/services/share.service';
 import { YoutubeService } from '../../shared/services/youtube.service';
 
@@ -18,7 +19,8 @@ export class PlaylistComponent implements OnInit {
     private route: ActivatedRoute,
     private youtubeService: YoutubeService,
     private router: Router, 
-    private shareService: ShareService
+    private shareService: ShareService,
+    private notificationService: NotificationService
   ) { }
 
   ngOnInit() {
@@ -37,7 +39,7 @@ export class PlaylistComponent implements OnInit {
         this.videoList = videos.items;
         this.isLoading = false;
       },
-      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
+      error: err => this.notificationService.showError('Coś poszło nie tak :(')
     })
   }
 

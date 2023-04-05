@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecommendedBook } from 'src/app/models/book';
 import { MathAppApiService } from '../../shared/services/math-app-api.service';
+import { NotificationService } from '../../shared/services/notification.service';
 
 @Component({
   selector: 'app-books',
@@ -11,12 +12,12 @@ export class BooksComponent implements OnInit {
 
   protected books: RecommendedBook[];
 
-  constructor(private apiService: MathAppApiService) { }
+  constructor(private apiService: MathAppApiService, private notificationService: NotificationService) { }
 
   ngOnInit() {
     this.apiService.getRecommendedBooks().subscribe({
       next: books => this.books = books,
-      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
+      error: err => this.notificationService.showError('Coś poszło nie tak :(')
     });
   }
 
