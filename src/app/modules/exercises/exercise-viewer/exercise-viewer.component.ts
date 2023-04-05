@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { menuController } from '@ionic/core';
 import { Exercise, Subchapter } from 'src/app/models/book';
+import { NotificationService } from '../../shared/services/notification.service';
 import { ShareService } from '../../shared/services/share.service';
 import { ExercisesService } from '../exercises.service';
 
@@ -16,7 +17,10 @@ export class ExerciseViewerComponent implements OnInit {
   protected exercises: number[];
   protected selectedSubchapter: Subchapter;
   
-  constructor(private exercisesService: ExercisesService, private shareService: ShareService) { }
+  constructor(
+    private exercisesService: ExercisesService,
+    private shareService: ShareService,
+    private notificationService: NotificationService) { }
 
   ngOnInit() {
     this.selectedSubchapter = this.shareService.getSubchapter();
@@ -33,7 +37,7 @@ export class ExerciseViewerComponent implements OnInit {
           this.isLoading = false;
         }
       },
-      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
+      error: err => this.notificationService.showError('Coś poszło nie tak :(')
     });
     menuController.toggle();
   }

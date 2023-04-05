@@ -6,7 +6,7 @@
 </ion-toolbar>
 
 <ion-content color="primary">
-  <img *ngIf="isLoading" class="waitingscreen" [src]="'assets/images/loadingscreen.gif'">
+  <div *ngIf="isLoading" class="waitingscreen"></div>
 
 
   <div class="menu-container" *ngIf="!selectedBook; else chapters">

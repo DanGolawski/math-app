@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Playlist } from '../../../models/youtube';
+import { NotificationService } from '../../shared/services/notification.service';
 import { YoutubeService } from '../../shared/services/youtube.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class ChannelComponent implements OnInit {
   protected isLoading = true;
   protected playlists?: Playlist[];
 
-  constructor(private youtubeService: YoutubeService) { }
+  constructor(private youtubeService: YoutubeService, private notificationService: NotificationService) { }
 
   ngOnInit() {
     this.getPlaylists();
@@ -24,7 +25,7 @@ export class ChannelComponent implements OnInit {
         this.playlists = playlists.items;
         this.isLoading = false;
       },
-      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`) 
+      error: err => this.notificationService.showError('Coś poszło nie tak :(')
     })
   }
 

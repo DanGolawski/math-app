@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Video } from 'src/app/models/video';
 import { MathAppApiService } from '../../shared/services/math-app-api.service';
+import { NotificationService } from '../../shared/services/notification.service';
 import { ShareService } from '../../shared/services/share.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class VideosComponent implements OnInit {
   constructor(
     private apiService: MathAppApiService,
     private router: Router,
-    private shareService: ShareService
+    private shareService: ShareService,
+    private notificationService: NotificationService
   ) { }
 
   ngOnInit() {
@@ -30,7 +32,7 @@ export class VideosComponent implements OnInit {
         this.videos = videos;
         this.isLoading = false;
       },
-      error: err => window.alert(`Wystąpił błąd. Spróbuj później (${err.status})`)
+      error: err => this.notificationService.showError('Coś poszło nie tak :(')
     });
   }
 
