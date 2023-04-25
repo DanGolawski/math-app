@@ -52,4 +52,8 @@ export class ContentListComponent implements OnInit {
     this.router.navigateByUrl('exercises/showexercises')
   }
 
+  protected sortSubchapters(subchapters: Subchapter[]): Subchapter[] {
+    return subchapters.sort((s1, s2) => s1.number > s2.number ? 1 : -1);
+  }
+
 }

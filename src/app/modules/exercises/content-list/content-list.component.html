@@ -20,7 +20,7 @@
           <ion-label class="chapter-name">{{ chapter.name }}</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
-        <p class="subchapter-name" (click)="showExercises(subchapter)" *ngFor="let subchapter of chapter.subchapters">{{ subchapter.number }}.{{ subchapter.name }}</p>
+        <p class="subchapter-name" (click)="showExercises(subchapter)" *ngFor="let subchapter of sortSubchapters(chapter.subchapters)">{{ subchapter.number }}.{{ subchapter.name }}</p>
         </div>
       </ion-accordion>
     </ion-accordion-group>

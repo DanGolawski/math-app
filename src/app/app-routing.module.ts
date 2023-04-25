@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/courses/courses.module').then(m => m.CoursesModule)
   },
   {
+    path: 'leaving-exam',
+    loadChildren: () => import('./modules/leaving-exam/leaving-exam.module').then(m => m.LeavingExamModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

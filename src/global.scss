@@ -34,8 +34,8 @@
   --ion-color-primary-tint: #1b5078;
 }
 
-ion-content {
-  background-color: aqua;
+ion-content{
+  --background: var(--ion-color-primary);
 }
 
 a {
