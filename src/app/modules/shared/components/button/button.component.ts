@@ -12,5 +12,6 @@ export class ButtonComponent {
   @Input() iconName: string;
   @Input() thumbnailUrl: string;
   @Input() fullWidth = false;
+  @Input() textOnly = false;
 
 }

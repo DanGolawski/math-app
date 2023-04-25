@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/onboarding/onboarding.module').then(m => m.OnboardingModule)
   },
   {
+    path: 'leaving-exam',
+    loadChildren: () => import('./modules/leaving-exam/leaving-exam.module').then(m => m.LeavingExamModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

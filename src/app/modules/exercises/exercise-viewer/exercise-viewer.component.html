@@ -19,7 +19,6 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Podgląd zadania</ion-title>
-      <ion-progress-bar *ngIf="isLoading" type="indeterminate"></ion-progress-bar>
     </ion-toolbar>
   </ion-header>
   <ion-content class="main-content">
@@ -36,3 +35,5 @@
     </ng-template>
   </ion-content>
 </div>
+
+<div *ngIf="isLoading" class="waitingscreen"></div>
