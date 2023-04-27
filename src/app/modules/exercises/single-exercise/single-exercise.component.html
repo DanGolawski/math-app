@@ -5,6 +5,8 @@
   <div class="additional-elements">
     <div class="menu-container">
       <app-button *ngIf="exerciseData.videourl" [title]="'Film z wyjaśnieniem'" [iconName]="'film-outline'" (click)="openVideo(exerciseData.videourl)" [fullWidth]="true"></app-button>
+      <p *ngIf="exerciseData.relatedvideos.length">Filmy, które pomogą Ci lepiej zrozumieć rozwiązanie:</p>
+      <app-button *ngFor="let video of exerciseData.relatedvideos" [fullWidth]="true" [iconName]="'film-outline'" [title]="video.title"></app-button>
     </div>
     <br>
     <p>Jakiś błąd?</p>

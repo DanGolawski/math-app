@@ -26,8 +26,6 @@ export class ExercisesService {
       chapterNumber: subchapterDetails.chapternumber,
       subchapterNumber: subchapterDetails.number
     }
-    return this.http.get<Exercise[]>(endpoints.exercises, {params: new HttpParams({fromObject: queryParams})}).pipe(
-      map((exercises: Exercise[]) => exercises.length ? exercises[0] : {} as Exercise)
-    );
+    return this.http.get<Exercise>(endpoints.exercises, {params: new HttpParams({fromObject: queryParams})});
   }
 }
