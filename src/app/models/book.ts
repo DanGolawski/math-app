@@ -33,6 +33,7 @@ export interface Exercise {
   imageurl: string;
   videourl: string;
   identifier: string;
+  relatedvideos: Video[]
 }
 
 export interface RecommendedBook {
@@ -40,4 +41,10 @@ export interface RecommendedBook {
   title: string;
   author: string;
   imageurl: string;
+}
+
+export interface Video {
+  id: number;
+  title: string;
+  url: string;
 }
