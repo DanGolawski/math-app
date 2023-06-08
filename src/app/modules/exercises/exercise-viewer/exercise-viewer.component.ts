@@ -16,6 +16,7 @@ export class ExerciseViewerComponent implements OnInit {
   protected isLoading = false;
   protected exercises: number[];
   protected selectedSubchapter: Subchapter;
+  protected userSearchedExercise = false;
   
   constructor(
     private exercisesService: ExercisesService,
@@ -27,7 +28,8 @@ export class ExerciseViewerComponent implements OnInit {
     this.exercises = Array.from({length: this.selectedSubchapter.numberofexercises}, (x, i) => i).map(num => num + this.selectedSubchapter.firstexercisenumber);
   }
 
-  protected showImage(exerciseNumber: number): void {
+  protected searchExercise(exerciseNumber: number): void {
+    this.userSearchedExercise = true;
     this.isLoading = true;
     const chapterDetails = (({ bookid, chapternumber, number }) => ({ bookid, chapternumber, number }))(this.selectedSubchapter);
     this.exercisesService.getExercise(exerciseNumber, chapterDetails).subscribe({
@@ -37,7 +39,14 @@ export class ExerciseViewerComponent implements OnInit {
           this.isLoading = false;
         }
       },
-      error: err => this.notificationService.showError('Coś poszło nie tak :(')
+      error: err => {
+        if (err.status === 404) {
+          this.selectedExercise = null;
+        } else {
+          this.notificationService.showError('Coś poszło nie tak :(')
+        }
+        this.isLoading = false;
+      }
     });
     menuController.toggle();
   }
