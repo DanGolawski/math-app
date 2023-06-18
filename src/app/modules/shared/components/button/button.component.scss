@@ -11,6 +11,10 @@
    -webkit-box-shadow: 1px 8px 70px 0px rgba(66, 68, 90, 1);
    -moz-box-shadow: 1px 8px 70px 0px rgba(66, 68, 90, 1);
    box-shadow: 1px 8px 70px 0px rgba(66, 68, 90, 1);
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   cursor: pointer;
 }
 
 .rectangle {
@@ -47,4 +51,11 @@ p {
    object-fit: cover;
    margin: 5px;
    border-radius: 50%;
- }
+}
+
+@media (min-width: 1024px) {
+   .rectangle {
+      width: 100%;
+   }
+}
+

@@ -1,0 +1,18 @@
+@media (min-width: 1024px) {
+   .main-container {
+     display: flex;
+     flex-direction: row;
+   }
+ 
+   .menu-container {
+     width: 50vw;
+     display: flex;
+     flex-direction: column;
+     justify-content: start;
+   }
+ 
+   .logo-container {
+     align-items: start;
+     flex: 1;
+   }
+ }

@@ -14,3 +14,26 @@ ion-icon {
   width: 60vw;
   font-size: 10rem;
 }
+
+@media (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-container {
+    width: 50vw;
+    flex-wrap: wrap;
+  }
+
+  .menu-link {
+    flex: 1;
+    margin: 10px;
+    flex-basis: 40%;
+  }
+
+  .logo-container {
+    align-items: start;
+    flex: 1;
+  }
+}

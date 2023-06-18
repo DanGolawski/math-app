@@ -1,6 +1,8 @@
 <ion-content color="primary">
   <div class="menu-container">
-    <app-button *ngFor="let video of videos" [title]="video.title" [subtitle]="video.author" [iconName]="'caret-forward-circle-outline'" [fullWidth]="true" (click)="playVideo(video)"></app-button>
+    <div class="button-wrapper">
+      <app-button *ngFor="let video of videos" [title]="video.title" [subtitle]="video.author" [iconName]="'caret-forward-circle-outline'" [fullWidth]="true" (click)="playVideo(video)"></app-button>
+    </div>
   </div>
   
 </ion-content>
