@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VideoPlayerComponent } from '../shared/components/video-player/video-player.component';
-import { ContentListComponent } from './content-list/content-list.component';
-import { ExerciseViewerComponent } from './exercise-viewer/exercise-viewer.component';
+import { BooksListComponent } from './books-list/books-list.component';
+import { ChaptersListComponent } from './chapters-list/chapters-list.component';
+import { ExercisesListComponent } from './exercises-list/exercises-list.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ContentListComponent
+    component: BooksListComponent
   },
   {
-    path: 'showexercises',
-    component: ExerciseViewerComponent
+    path: ':bookId',
+    component: ChaptersListComponent
+  },
+  {
+    path: 'showexercises/:chapterId',
+    component: ExercisesListComponent
   },
   {
     path: 'exercise-video',

@@ -1,0 +1,5 @@
+<ion-content>
+  <div class="menu-container">
+    <app-button *ngFor="let book of books" [title]="book.title" (click)="showBookChapters(book.id)"></app-button>
+  </div>
+</ion-content>

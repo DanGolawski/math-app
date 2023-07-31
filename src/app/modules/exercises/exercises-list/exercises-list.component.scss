@@ -1,0 +1,32 @@
+.exercises-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 20px;
+}
+
+.exercise-number {
+   position: relative;
+   width: 20%;
+   background: white;
+   color: var(--ion-color-primary);
+   margin: 10px;
+   font-weight: bold;
+   padding-bottom: 20%;
+   border-radius: 20%;
+}
+
+.exercise-number-text {
+   position: absolute;
+   font-size: 2rem;
+   margin: auto;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+}
+

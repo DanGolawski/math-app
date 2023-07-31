@@ -1,39 +1,28 @@
-export interface BookShort {
-  id: string;
-  title: string;
-}
-
 export interface Book {
-  name: string;
-  id: string;
-  chapters: Chapter[];
+  id: number;
+  title: string;
 }
 
 export interface Chapter {
   number: number;
-  name: string;
+  title: string;
+  firstexercise: number;
+  exercisesnumber: number;
   subchapters: Subchapter[];
 }
 
 export interface Subchapter {
   id: number;
-  bookid: string;
-  chapternumber: number;
   number: number;
-  name: string;
-  numberofexercises: number;
-  firstexercisenumber: number;
+  title: string;
+  chapterid: number;
+  firstexercise: number;
+  exercisesnumber: number;
 }
 
 export interface Exercise {
-  bookid: string;
-  chapternumber: number;
-  subchapternumber: number;
-  number: number;
   imageurl: string;
-  videourl: string;
-  identifier: string;
-  relatedvideos: Video[]
+  videoid: string;
 }
 
 export interface RecommendedBook {
