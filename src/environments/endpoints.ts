@@ -1,7 +1,7 @@
 export const endpoints = {
    books: 'books',
-   chapters: (bookId: string) => `chapters?bookId=${bookId}`,
+   chapters: (bookId: string) => `books/chapters/${bookId}`,
    recommendedVideos: 'recommended-videos',
    recommendedBooks: 'recommended-books',
-   exercises: 'exercises',
+   exercises: (subchapterId: number, exerciseNumber: number) => `/exercises/get/${subchapterId}/${exerciseNumber}`,
 }
