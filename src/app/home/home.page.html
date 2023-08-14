@@ -10,20 +10,24 @@
       <a routerLink="/exercises" class="menu-link">
         <app-button [title]="'Zadania'" [iconName]="'create-outline'"></app-button>
       </a>
-      <a routerLink="/courses" class="menu-link">
-        <app-button [title]="'Tutoriale'" [iconName]="'caret-forward-circle-outline'"></app-button>
+      <!-- routerLink="/courses" -->
+      <a class="menu-link">
+        <app-button [disabled]="true" [title]="'Tutoriale'" [iconName]="'caret-forward-circle-outline'"></app-button>
       </a>
-      <a routerLink="/self-improvement" class="menu-link">
-        <app-button [title]="'Rozwój osobisty'" [iconName]="'trending-up-outline'"></app-button>
+      <!-- routerLink="/self-improvement" -->
+      <a class="menu-link">
+        <app-button [disabled]="true" [title]="'Rozwój osobisty'" [iconName]="'trending-up-outline'"></app-button>
       </a>
       <a href="https://www.instagram.com/math.masters.matematyka/" class="menu-link">
         <app-button [title]="'Instagram'" [iconName]="'logo-instagram'"></app-button>
       </a>
-      <a href="leaving-exam" class="menu-link">
-        <app-button [title]="'Matura'" [iconName]="'school-outline'"></app-button>
+      <!-- href="leaving-exam" -->
+      <a class="menu-link">
+        <app-button [disabled]="true" [title]="'Matura'" [iconName]="'school-outline'"></app-button>
       </a>
-      <a href="https://medium.com/@mathmasters.contact" class="menu-link">
-        <app-button [title]="'Nasz blog'" [iconName]="'newspaper-outline'"></app-button>
+      <!-- href="https://medium.com/@mathmasters.contact" -->
+      <a class="menu-link">
+        <app-button [disabled]="true" [title]="'Nasz blog'" [iconName]="'newspaper-outline'"></app-button>
       </a>
     </div>
   </div>

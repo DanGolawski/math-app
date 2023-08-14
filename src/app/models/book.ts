@@ -21,8 +21,8 @@ export interface Subchapter {
 }
 
 export interface Exercise {
-  imageurl: string;
-  videoid: string;
+  image: string;
+  video: string;
 }
 
 export interface RecommendedBook {

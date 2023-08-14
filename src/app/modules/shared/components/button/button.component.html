@@ -1,15 +1,17 @@
-<div class="container" [ngClass]="fullWidth ? 'rectangle' : 'square'">
-  <ng-container *ngIf="!textOnly">
-    <img *ngIf="thumbnailUrl; else icon" class="thumbnail" src="{{ thumbnailUrl }}">
-    <ng-template #icon>
-      <ion-icon *ngIf="iconName; else letter" class="icon" [name]="iconName"></ion-icon>
-      <ng-template #letter>
-        <span class="letter-icon">{{ title[0] | uppercase }}</span>
+<div [class.disabled]="disabled">
+  <div class="container" [ngClass]="fullWidth ? 'rectangle' : 'square'">
+    <ng-container *ngIf="!textOnly">
+      <img *ngIf="thumbnailUrl; else icon" class="thumbnail" src="{{ thumbnailUrl }}">
+      <ng-template #icon>
+        <ion-icon *ngIf="iconName; else letter" class="icon" [name]="iconName"></ion-icon>
+        <ng-template #letter>
+          <span class="letter-icon">{{ title[0] | uppercase }}</span>
+        </ng-template>
       </ng-template>
-    </ng-template>
-  </ng-container>
-  <div class="text-container">
-    <p class="title">{{ title }}</p>
-    <p class="subtitle" *ngIf="subtitle">{{ subtitle }}</p>
+    </ng-container>
+    <div class="text-container">
+      <p class="title">{{ title }}</p>
+      <p class="subtitle" *ngIf="subtitle">{{ subtitle }}</p>
+    </div>
   </div>
 </div>
