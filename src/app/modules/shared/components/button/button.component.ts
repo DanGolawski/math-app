@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent {
 
+  @Input() disabled = false;
   @Input() title: string;
   @Input() subtitle: string;
   @Input() iconName: string;

@@ -32,4 +32,8 @@ export class ExercisesService {
   public getExercise(subchapterId: number, exerciseNumber: number): Observable<Exercise> {
     return this.http.get<Exercise>(endpoints.exercises(subchapterId, exerciseNumber));
   }
+
+  public requestExerciseSolution(subchapterId: number, exerciseNumber: number): void {
+    this.http.post(endpoints.requestExercise, {subchapter: subchapterId, exercise: exerciseNumber}).subscribe();
+  }
 }

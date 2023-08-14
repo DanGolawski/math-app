@@ -1,15 +1,9 @@
-<ion-content>
-  <div *ngIf="exerciseNotFound; else exerciseView">
-    <h1>Tego zadania jeszcze nie ma</h1>
-    <h3>Ale spokojnie. Rozwiązanie będzie dostępne nawet tego samego dnia!</h3>
-    <h3>Naciśnij przycisko poniżej</h3>
-    <button (click)="requestSolution()">Zamknij</button>
-  </div>
-  <ng-template #exerciseView>
-    <button (click)="close()">Zamknij</button>
-    <div class="modal-container">
-      <img class="solution-image" src="https://i.pinimg.com/564x/76/0e/65/760e65d1bfe1f7c98a58dc6e374dab65.jpg">
-      <iframe class="solution-video" width="560" height="315" src="https://www.youtube.com/embed/Aox5s2s_SEI" title="MathMasters Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </ng-template>
-</ion-content>
+<div class="modal-container">
+  <p class="close-button" (click)="close()">X</p>
+  <img *ngIf="exercise?.image" src="data:image/png;base64,{{exercise?.image}}" />
+
+  <ng-container *ngIf="videoUrl">
+    <h2>Film z wyjaśnieniem:</h2>
+    <iframe class="solution-video" src="https://www.youtube.com/embed/EIxsPBbZ_b8" title="MathMasters Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </ng-container>
+</div>

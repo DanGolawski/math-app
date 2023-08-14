@@ -4,4 +4,5 @@ export const endpoints = {
    recommendedVideos: 'recommended-videos',
    recommendedBooks: 'recommended-books',
    exercises: (subchapterId: number, exerciseNumber: number) => `/exercises/get/${subchapterId}/${exerciseNumber}`,
+   requestExercise: 'exercises/request-solution'
 }
