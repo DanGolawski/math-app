@@ -1,12 +1,19 @@
 <ion-content>
-  <ion-accordion-group expand="inset">
-    <ion-accordion *ngFor="let chapter of chapters" [value]="chapter.title">
-      <ion-item slot="header" color="light">
-        <ion-label>{{ chapter.title }}</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-      <p (click)="showExercises(subchapter)" *ngFor="let subchapter of chapter.subchapters">{{ subchapter.number }}. {{ subchapter.title }}</p>
+  <div class="container">
+    <div class="panel">
+      <div class="spinner-container" *ngIf="!chapters">
+        <ion-spinner></ion-spinner>
       </div>
-    </ion-accordion>
-  </ion-accordion-group>
+      <ion-accordion-group expand="inset" *ngIf="chapters">
+        <ion-accordion *ngFor="let chapter of chapters" [value]="chapter.title">
+          <ion-item slot="header" color="primary">
+            <ion-label>{{ chapter.title }}</ion-label>
+          </ion-item>
+          <div class="ion-padding subchapters-container" slot="content">
+            <p (click)="showExercises(subchapter)" *ngFor="let subchapter of chapter.subchapters">{{ subchapter.number }}. {{ subchapter.title }}</p>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+  </div>
 </ion-content>

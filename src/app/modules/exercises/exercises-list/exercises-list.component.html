@@ -1,7 +1,7 @@
 <ion-content>
-  <div class="exercises-container">
-    <div class="exercise-number" *ngFor="let num of exerciseNumbers" (click)="showExerciseDetails(num)">
-      <span class="exercise-number-text">{{ num }}</span>
+  <div class="container">
+    <div class="panel">
+      <div class="button" *ngFor="let num of exerciseNumbers" (click)="showExerciseDetails(num)">{{ num }}</div>
     </div>
   </div>
 </ion-content>

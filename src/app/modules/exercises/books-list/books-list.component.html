@@ -1,5 +1,10 @@
 <ion-content>
-  <div class="menu-container">
-    <app-button *ngFor="let book of books" [title]="book.title" (click)="showBookChapters(book.id)"></app-button>
+  <div class="container">
+    <div class="panel">
+      <div class="spinner-container" *ngIf="!books">
+        <ion-spinner></ion-spinner>
+      </div>
+      <div *ngFor="let book of books" (click)="showBookChapters(book.id)" class="button">{{ book.title }}</div>
+    </div>
   </div>
 </ion-content>

@@ -1,9 +1,12 @@
 <div class="modal-container">
   <p class="close-button" (click)="close()">X</p>
+  <div class="spinner-container" *ngIf="loading">
+    <ion-spinner></ion-spinner>
+  </div>
   <img *ngIf="exercise?.image" src="data:image/png;base64,{{exercise?.image}}" />
-
-  <ng-container *ngIf="videoUrl">
+  <!-- <ng-container *ngIf="videoUrl">
     <h2>Film z wyjaśnieniem:</h2>
     <iframe class="solution-video" src="https://www.youtube.com/embed/EIxsPBbZ_b8" title="MathMasters Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </ng-container>
+  </ng-container> -->
 </div>
+

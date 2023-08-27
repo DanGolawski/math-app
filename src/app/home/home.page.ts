@@ -8,15 +8,11 @@ import { ShareService } from '../modules/shared/services/share.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit{
+export class HomePage{
 
   protected videoList: any;
-  protected showStartScreen = true;
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private shareService: ShareService) {}
 
-  ngOnInit(): void {
-    setTimeout(() => this.showStartScreen = false, 2000);
-  }
 
 }
