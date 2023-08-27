@@ -1,55 +1,34 @@
-<ion-content color="primary">
-  <div class="main-container">
-    <div class="logo-container">
-      <img src="assets/icon/logo.png" class="logo">
-    </div>
-    <div class="menu-container">
-      <div class="menu-link">
-        <app-button id="open-modal" [title]="'Korepetycje'" [iconName]="'school-outline'"></app-button>        
-      </div>
-      <a routerLink="/exercises" class="menu-link">
-        <app-button [title]="'Zadania'" [iconName]="'create-outline'"></app-button>
-      </a>
-      <!-- routerLink="/courses" -->
-      <a class="menu-link">
-        <app-button [disabled]="true" [title]="'Tutoriale'" [iconName]="'caret-forward-circle-outline'"></app-button>
-      </a>
-      <!-- routerLink="/self-improvement" -->
-      <a class="menu-link">
-        <app-button [disabled]="true" [title]="'Rozwój osobisty'" [iconName]="'trending-up-outline'"></app-button>
-      </a>
-      <a href="https://www.instagram.com/math.masters.matematyka/" class="menu-link">
-        <app-button [title]="'Instagram'" [iconName]="'logo-instagram'"></app-button>
-      </a>
-      <!-- href="leaving-exam" -->
-      <a class="menu-link">
-        <app-button [disabled]="true" [title]="'Matura'" [iconName]="'school-outline'"></app-button>
-      </a>
-      <!-- href="https://medium.com/@mathmasters.contact" -->
-      <a class="menu-link">
-        <app-button [disabled]="true" [title]="'Nasz blog'" [iconName]="'newspaper-outline'"></app-button>
-      </a>
+<ion-content>
+  <div class="container">
+    <img class="logo" src="assets/icon/logo.png">
+    <div class="panel">
+      <a routerLink="/exercises"><div class="button">Rozwiązania zadań</div></a>
+      <div class="button" id="open-modal" >Oferta korepetycji</div>
+      <div class="button inactive">Tutoriale</div>
+      <div class="button inactive">Przygotowanie do matury</div>
+      <div class="button inactive">Rozwój osobisty</div>
+      <div class="button inactive">Nasz blog</div>
+      <div class="button inactive">Social media</div>
     </div>
   </div>
-
-  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
-    <ng-template>
-      <div class="modal-content">
-        <h2>Potrzebujesz korków?</h2>
-        <h4>Możesz umówić się na jedno lub kilka spotkań</h4>
-        <ul>
-          <li>Matematyka podstawowa</li>
-          <li>Matematyka rozszerzona</li>
-          <li>Przygotowanie do matury</li>
-          <li>Przygotowanie do sprawdzianu</li>
-          <li>Ćwiczenia bieżących tematów</li>
-        </ul>
-        <a href="tel:515451515">
-          <ion-button expand="block">Zadzwoń</ion-button>
-        </a>
-      </div>
-    </ng-template>
-  </ion-modal>
 </ion-content>
 
-<div *ngIf="showStartScreen" class="startscreen"></div>
+<ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+  <ng-template>
+    <div class="modal-content">
+      <h2>Potrzebujesz korków?</h2>
+      <h4>Możesz umówić się na jedno lub kilka spotkań</h4>
+      <ul>
+        <li>Matematyka podstawowa</li>
+        <li>Matematyka rozszerzona</li>
+        <li>Przygotowanie do matury</li>
+        <li>Przygotowanie do sprawdzianu</li>
+        <li>Ćwiczenia bieżących tematów</li>
+      </ul>
+      <a href="tel:515451515">
+        <div class="button">Zadzwoń</div>
+      </a>
+    </div>
+  </ng-template>
+</ion-modal>
+

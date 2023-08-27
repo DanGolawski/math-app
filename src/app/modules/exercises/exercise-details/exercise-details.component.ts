@@ -15,6 +15,7 @@ export class ExerciseDetailsComponent implements OnInit {
   exerciseNumber: number; // comes from modalCtrl
   exercise: Exercise;
   videoUrl: SafeResourceUrl;
+  loading = true;
 
   constructor(
     private exercisesService: ExercisesService,
@@ -36,7 +37,8 @@ export class ExerciseDetailsComponent implements OnInit {
       },
       error: error => {
         console.log(error);
-      }
+      },
+      complete: () => this.loading = false
     });
   }
 
